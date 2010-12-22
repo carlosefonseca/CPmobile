@@ -1,18 +1,22 @@
 CACHE MANIFEST
-# Version 0.1.6
+# 7 Out 12 37
 index.html
-jqtouch/jquery.1.3.2.min.js
+jqtouch/jquery.js
 jqtouch/jqtouch.min.css
 jqtouch/jqtouch.min.js
+jqtouch/extensions/jqt.offline.js
 themes/apple/theme.min.css
 themes/apple/img/backButton.png
-themes/apple/img/blueButton.png
 themes/apple/img/grayButton.png
 themes/apple/img/whiteButton.png
 themes/apple/img/toolbar.png
 themes/apple/img/toolButton.png
 themes/apple/img/loading.gif
-jqtouch/extensions/jqt.offline.js
+themes/apple/spinner.gif
+themes/1.png
 themes/splash.png
-themes/icon.png
-themes/apple/img/pinstripes.png
+http://carlosefonseca.com/cp/themes/icon.png
+scripts.min.js
+NETWORK:
+getdata.php
+estacoes.php

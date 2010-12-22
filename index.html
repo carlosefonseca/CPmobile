@@ -1,32 +1,15 @@
 <!doctype html>
-<html>
+<html manifest="cache.manifest">
     <head>
         <meta charset="UTF-8" />
-        <title>Mobile CP</title>
+        <title>CP.mobile</title>
 		<link rel="apple-touch-icon-precomposed" href="http://carlosefonseca.com/cp/themes/icon.png"/>
         <style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>
         <style type="text/css" media="screen">@import "themes/apple/theme.min.css";</style>
-        <style>.round small {width:auto;}
-         #about {
-                padding: 100px 10px 40px;
-                text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
-                font-size: 13px;
-                text-align: center;
-                background: #161618;
-				color: #fff;
-            }
-            #about p {
-                margin-bottom: 8px;
-            }
-            #about a {
-                color: #fff;
-                font-weight: bold;
-                text-decoration: none;
-            }
-</style>
         <script src="jqtouch/jquery.js" type="text/javascript" charset="utf-8"></script>
-        <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
-<!--        <script src="jqtouch/extensions/jqt.offline.js" type="application/x-javascript" charset="utf-8"></script>-->
+        <script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
+        <script src="jqtouch/extensions/jqt.offline.js" type="application/x-javascript" charset="utf-8"></script>
+		<script src="scripts.min.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" charset="utf-8">
             var jQT = new $.jQTouch({
                 icon: 'themes/icon.png',
@@ -34,80 +17,73 @@
                 fullScreen: false,
                 preloadImages: [
                     'themes/apple/img/backButton.png',
-                    'themes/apple/img/blueButton.png',
-                    'themes/apple/img/grayButton.png',
                     'themes/apple/img/whiteButton.png',
                     'themes/apple/img/toolbar.png',
-                    'themes/apple/img/loading.gif'
                     ]
             });
             
+			var db;
+			var defaultDate;
+			
 			$(function(){
 				today = new Date();
 				var mes = (today.getMonth()+1);
-				$("#day").val(today.getFullYear()+"-"+(mes<10?'0'+mes:mes)+"-"+today.getDate());
-				$("#hour").val(today.getHours());
+				var dia = today.getDate();
+				defaultDate = today.getFullYear()+"-"+(mes<10?'0'+mes:mes)+"-"+(dia<10?'0'+dia:dia);
+				$("#day").val(defaultDate);
+				createHours(today.getHours());
+
+				db = openDatabase('CPm', '1.0', 'CP.mobile support DB', 100 * 1024);				
+				initDb();
 				
+				$("input.field").focus(function(){window.scrollTo(0,85)});
+				$("#departure")
+					.keyup(function(){presentAutocomplete($(this), $("#compdep")); })
+					.focus(function(){presentAutocomplete($(this), $("#compdep")); })
+					.blur (function(){acBluring($(this), $("#compdep"))});
+				$("#arrival")
+					.keyup(function(){presentAutocomplete($(this), $("#comparr")); })
+					.focus(function(){presentAutocomplete($(this), $("#comparr")); })
+					.blur (function(){acBluring($(this), $("#comparr"))});
+
+				presentFavorites($("#departure"), $("#compdep"));
+				presentFavorites($("#arrival"), $("#comparr"));
+
 				$("#theform").submit(function(){return dothesearch();});
 			});
-			
-				function dothesearch(){
-					var dayFormat = /201\d-[01]\d-[02]\d/;
-
-					if ($("#departure").val() == "" || $("#arrival").val() == "") {
-						alert("Por favor preencha as estações de partida e de chegada.");
-						return false;
-					}
-					if (!$("#day").val().match(dayFormat)) {
-						alert("A data tem que estar no formato YYYY-MM-DD.");
-						$("#day").focus();
-						return false;
-					}
-					if (!($("#hour").val() < 24)) {
-						alert("A hora está errada.");
-						$("#hour").focus();
-						return false;
-					}
-					$("#spinner").fadeIn();
-					console.log("Requesting data… "+$("#theform").serialize());
-					$.getJSON('getdata.php', $("#theform").serialize() , function(data,t) {fillTrainHours(data)});
-					return false;
-				};
-			
-			function fillTrainHours(data) {
-				console.log("Data receiveid: "+data);
-				if (data.length == 0) { $("#spinner").fadeOut(); alert("Não foram encontrados resultados."); return; }
-				var rows = $("#trainhours #results");
-				var first = $("li:first", rows);
-				var nrows = $("li", rows).length;
-				for (var r in data) {
-					if (r>nrows) {
-						$(first).clone().attr("id", "t"+r).appendTo(rows);
-					}
-					var row = $("#t"+r, rows);
-					for (c in data[r]) {
-						$(".t"+c,row).text(data[r][c]);
-					}
-				}
-				$("#spinner").fadeOut();
-				jQT.goTo("#trainhours","slide");
-			}
         </script>
 	</head>
 	<body>
-        <div id="home" class="current">
-			<div id="spinnerw"><div id="spinner">A Carregar…</div></div>
+        <div id="home" class="current" style="height:640px">
+		<div id="spinnerw"><div id="spinner">A Carregar…</div></div>
 	        <div class="toolbar">
-	            <h1>Mobile CP</h1>
+	            <h1>CP.mobile</h1>
 	            <a class="button slideup" id="infoButton" href="#about">Acerca</a>
 	        </div>
 	        <form id="theform" action="getdata.php" method="GET" class="form">
 		        <h2>Hora de comboio:</h2>
-				<ul class="edit rounded">
-					<li>Partida: <input type="text" name="departure" placeholder="Estação" id="departure" value=""/></li>
-					<li>Chegada: <input type="text" name="arrival" placeholder="Estação" id="arrival" value=""/></li>
-					<li>Dia: <input type="number" name="day" value="" id="day" /></li>
-					<li>Hora: <input type="number" name="hour" value="" id="hour" maxlength="2" min="0" max="23"/></li>
+				<ul class="edit edgetoedge">
+					<li>De:<div class="fieldw">
+						<input type="text" tabindex="1" name="departure" placeholder="Estação" id="departure" class="field" value=""/>
+						</div>
+						<div class="completion" id="compdep"></div>
+						</li>
+					<li>Para:<div class="fieldw" style="left:55px;">
+						<input type="text" tabindex="2" name="arrival" placeholder="Estação" id="arrival" class="field" value=""/>
+						</div>
+						<div class="completion" id="comparr"></div>
+						</li>
+					<li><div style="display:inline-block;width:60%;position:relative">
+						Dia: 
+						<div class="fieldw" style="width:5.5em">
+						<input type="number" tabindex="3" name="day" class="field" id="day" style="display:inline !important" size="10em" maxlength="10"/></div>
+						</div>
+
+						<div style="display:inline-block;width:30%;position:absolute;right:0">
+						Hora: <div class="fieldw" style="width:2em;left:55px;"><select name="hour" tabindex="4" class="field" id="hour" maxlength="2" min="0" max="23" style="width:2em"><option value="0">0h</option></select>
+						</div>
+						</div>
+						</li>
 				</ul>
 				<div style="display:block;margin:10px;">
 					<input type="submit" class="submit whiteButton" style="width:100%;background:none" value="Procurar"/>
@@ -116,18 +92,18 @@
 		</div>
 		
 		
-		<div id="trainhours">
+		<div id="trainhours" class="round">
 			<div class="toolbar">
 				<h1>Comboios</h1>
-                <a class="back" href="#">MobileCP</a>
+                <a class="back" href="#">Início</a>
 			</div>
 			<ul id="results" class="round">
-				<li id="t1"><span class="td">0h00</span> › <span class="ta">99h99</span> <small><span class="tt">U</span> • <span class="tl">00h99</span></small>
+				<li id="t1"><span class="td">0h00</span> <small class="t2"></small> › <span class="ta">99h99</span> <small><span class="tt">U</span> • <span class="tl">00h99</span></small>
 			</ul>
 		</div>
 		
 		 <div id="about" class="selectable">
-                <p><strong>Mobile CP</strong><br />Versão 0.2 beta<br />
+                <p><strong>CP.mobile</strong><br />Versão 0.4.1 beta<br />5 Out 2010<br />
                     <a href="http://www.carlosefonseca.com">Por Carlos Fonseca</a></p>
                 <p><em>Sem qualquer afiliação à empresa<br /> CP — Comboios de Portugal.</em></p>
                 <p>
@@ -137,3 +113,4 @@
                 <p><br /><br /><a href="#" class="grayButton goback">Fechar</a></p>
         </div>
 	</body>
+	

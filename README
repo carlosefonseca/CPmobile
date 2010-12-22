@@ -21,7 +21,7 @@ day > dia no formato YYYY-MM-DD
 hour > hora (opcional)
 Por exemplo:
 
-http://carlosefonseca.com/cp/getdata.php?departure=Sacavém&arrival=Monte Abraão&day=2010-08-23&hour=20
+http://carlosefonseca.com/cp/getdata.php?departure=Sacavem&arrival=Monte%20Abraao&day=2010-08-23&hour=20
 
 resulta em JSON que representa um array de comboios em que cada comboio é um array composto pelos campos:
 

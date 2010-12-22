@@ -1,4 +1,7 @@
 <?php
+$debug = false;
+$cache = false;
+date_default_timezone_set("Europe/Lisbon");
 function normalize ($string) {
     $table = array(
         'Š'=>'S', 'š'=>'s', 'Đ'=>'Dj', 'đ'=>'dj', 'Ž'=>'Z', 'ž'=>'z', 'Č'=>'C', 'č'=>'c', 'Ć'=>'C', 'ć'=>'c',
@@ -18,17 +21,28 @@ function normalize ($string) {
 
 
 // GET PARAMETERS
-if (!isset($_GET["depart"]) && !isset($_GET["arrival"]))
-die("depart and arival are required");
+if (!isset($_GET["depart"]) && !isset($_GET["arrival"])) {
+	if (!$cache) {
+		die("depart and arival are required");
+	}
+}
 
-$depart = normalize($_GET["departure"]);
-$arrival= normalize($_GET["arrival"]);
-$day 	= normalize($_GET["day"]);
-$hour 	= normalize($_GET["hour"]);
+$depart = (!$cache)? normalize($_GET["departure"])	: "alhandra";
+$arrival= (!$cache)? normalize($_GET["arrival"]) 	: "oriente";
+$day 	= (!$cache)? normalize($_GET["day"])		: date("o-m-d");
+$hour 	= (!$cache)? normalize($_GET["hour"])		: date("G");
+$margin = isset($_GET["margin"])?normalize($_GET["margin"]):15;
+
 
 $postData = "depart=$depart&arrival=$arrival&date=$day&timeType=Partida&time=$hour&allServices=allServices&returnDate=&returnTimeType=Partida&returnTime=";
 
+if ($debug) { echo "postData: ".$postData."\n\n"; }
+
 //CONFIGURE AND DOWNLOAD THE PAGE
+$f;
+if (!$cache || !file_exists("data.html")) {
+if ($debug) { echo "\nfresh data\n"; }
+
 $ch = curl_init("http://www.cp.pt/cp/searchTimetable.do");
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -38,6 +52,16 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 $f = curl_exec($ch);
 curl_close($ch);
 
+//DEBUG
+$fp = fopen("data.html","w+");
+fwrite($fp, $f);
+fclose($fp);
+} else {
+	if ($debug) echo "cached data\n\n";
+	$fp = fopen("data.html","r");
+	$f = fread($fp, filesize("data.html"));
+	fclose($fp);
+}
 
 //FILTER JUST THE DATA TABLE
 $needleStart = '<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">';
@@ -56,7 +80,13 @@ $final = array();
 
 //id type departure arrival length
 $key2field = array(1=>"i", 2=>"t", 3=>"d", 4=>"a", 5=>"l");
+$currentHour = false;
+$tdiff = $margin*60;
+if ($day == date("o-m-d")) {
+	$currentHour = time();
+}
 
+$id = 1;
 foreach($rows as $r) {
 	$cells = explode('<td ', $r,7);
 	unset($cells[0], $cells[6]);
@@ -69,11 +99,13 @@ foreach($rows as $r) {
 		$c = substr($c, $st, $le);
 		$line[$key2field[$k]] = $c;
 	}
-	if (strlen($line['t'])>5) {
-		$line["t"] = str_replace('<b class="orange">|</b>', '+', $line["t"]);
-	}
-	$line["i"] = substr($line["i"], 0 ,-1);
+	if (strlen($line['t'])>5) {		$line["t"] = str_replace('<b class="orange">|</b>', '+', $line["t"]);	}
+	
+	if ($currentHour && ($currentHour - strtotime(strtr($line['d'],'h',':')))>$tdiff) {	continue; }
+	$currentHour = false;
+	$line["i"] = $id;//substr($line["i"], 0 ,-1);
 	$final[$line["i"]] = $line;
+	$id++;
 }
 
 echo json_encode($final);

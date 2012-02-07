@@ -27,7 +27,7 @@ Este "webservice" está em [http://carlosefonseca.com/cp/getdata.php](http://car
 
 Por exemplo:
 
-[http://carlosefonseca.com/cp/getdata.php?departure=Sacavem&arrival=Monte Abraao&day=2010-08-23&hour=20](http://carlosefonseca.com/cp/getdata.php?departure=Sacavem&arrival=Monte%20Abraao&day=2010-08-23&hour=20)
+[http://carlosefonseca.com/cp/getdata.php?departure=Sacavem&arrival=Monte%20Abraao&day=2010-08-23&hour=20](http://carlosefonseca.com/cp/getdata.php?departure=Sacavem&arrival=Monte%20Abraao&day=2010-08-23&hour=20)
 
 resulta em JSON que representa um array de comboios em que cada comboio é um array composto pelos campos:
 

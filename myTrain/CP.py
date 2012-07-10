@@ -6,6 +6,8 @@ import re
 import json
 import sqlite3
 
+from bs4 import BeautifulSoup
+
 class CP():
     cookies = []
     headers = {'User-Agent':"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/536.19 (KHTML, like Gecko) Version/6.0 Safari/536.19"}
@@ -16,8 +18,9 @@ class CP():
             hour = datetime.now().time().hour
         today = datetime.now().date() == date
         # print origin, destination, date,today, hour
+        print "Origin:", origin, "Dest:",destination, "Date:", date, "Hour:",hour
     	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
-        print r.cookies
+        # print r.cookies
         a = r.content
         start = a.find('<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">')
         end = a.find('<img src="static/images/pix.gif" alt="" width="7" height="10" border="0" /><br />')
@@ -55,7 +58,26 @@ class CP():
         f = open('out.html', 'w')
         f.write(r2.content)
         f.close()
-        return r2.content
+
+        soup = BeautifulSoup(r2.content)
+        x = soup.find_all("table", {"class" : "fd_content"})[1]
+
+        comboiosraw = x.parent.find_all("table", {"width":"606"})[4:]
+
+        comboios = []
+
+        for c in comboiosraw:
+            if "Comboio n." in c.get_text():
+                ca = re.split("\s{2,}",c.get_text().strip().replace(u"\xa0", ""))
+
+                paragens = []
+                for p in ca[2:]:
+                    paragens.append(p.split("\n"))
+
+                comboios.append({"tipo":ca[0], "numero":int(re.findall("(\d+)", ca[1])[0]), "paragens":paragens})
+
+        return json.dumps(comboios)
+
 
     def setCookie(self, rID, cookies):
         while (len(self.cookies) > 3):
@@ -66,3 +88,12 @@ class CP():
         for i in reversed(self.cookies):
             if (i["id"] == rid):
                 return i["cookies"]
+
+
+# cp = CP()
+# x = cp.schedules("azambuja", "benfica", "2012-06-11", "9")
+# print x
+
+# rid = json.loads(x)["requestid"]
+# y = cp.details(rid, 0)
+# print y

@@ -18,7 +18,7 @@ class CP():
             hour = datetime.now().time().hour
         today = datetime.now().date() == date
         # print origin, destination, date,today, hour
-        print "Origin:", origin, "Dest:",destination, "Date:", date, "Hour:",hour
+        # print "Origin:", origin, "Dest:",destination, "Date:", date, "Hour:",hour
     	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
         # print r.cookies
         a = r.content
@@ -27,7 +27,7 @@ class CP():
         b = a[start:end]
         c = b.split('<td width="18" align="right"><a href="javascript:toggleLine(')
         c.pop(0)
-        arr = {};
+        arr = [];
         timeDiff = 15
         i = 1
         h = datetime.now().hour
@@ -41,9 +41,13 @@ class CP():
             
             if (today):
                 td = int(e[2][:2])*60+int(e[2][3:]) - h*60
+                print "TIMEDIFF",td,
                 if td < -timeDiff:
+                    print "SKIPPING"
                     continue;
-            arr[page] = ({'i':i-1, 't':e[1], 'd':e[2], 'a':e[3], 'l':e[4]})
+
+            print "NOT SKIPPING"
+            arr.append({'i':i-1, 't':e[1], 'd':e[2], 'a':e[3], 'l':e[4]})
             i+=1
 
         # store cookies with solutionid and return solutionid
@@ -89,6 +93,23 @@ class CP():
             if (i["id"] == rid):
                 return i["cookies"]
 
+    def handle(self, action, x):
+        if action == "schedules":
+            if ("departure" not in x) or ("arrival" not in x):
+                print json.dumps({"error":"Parameters 'departure' and 'arrival' are required. 'day' and 'hour' are optional."})
+                return
+
+            if "day" in x:
+                print self.schedules(x["departure"][0], x["arrival"][0], x["day"][0])
+            else:
+                print self.schedules(x["departure"][0], x["arrival"][0])
+
+        elif action == "details":
+            if ("requestid" not in x) or ("index" not in x):
+                print json.dumps({"error":"Parameters 'requestid' and 'index' are required."})
+                return
+
+            print self.details(x["requestid"][0], x["index"][0])
 
 # cp = CP()
 # x = cp.schedules("azambuja", "benfica", "2012-06-11", "9")

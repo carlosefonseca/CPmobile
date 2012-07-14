@@ -9,7 +9,7 @@ import sqlite3
 from bs4 import BeautifulSoup
 
 class Refer():
-	def Departures(self, stationId):
+	def departures(self, stationId):
 		r = requests.get("http://www.refer.pt/MenuPrincipal/Passageiros/PartidaseChegadas.aspx?stationid="+str(stationId)+"&Type=Arrivals")
 
 		soup = BeautifulSoup(r.text)
@@ -36,6 +36,14 @@ class Refer():
 			results.append(result)
 
 		return json.dumps(results)
+
+	def handle(self, action, x):
+		if action == "departures":
+			if ("stationid" not in x):
+				print json.dumps({"error":"Parameter 'stationid' is required."})
+				return
+
+			print self.departures(x["stationid"][0])
 
 
 # r = Refer()

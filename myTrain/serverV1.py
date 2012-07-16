@@ -29,11 +29,13 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
         finally:
             sys.stdout = stdout # restore
 
-PORT = 8000
 
-httpd = BaseHTTPServer.HTTPServer(("", PORT), Handler)
-print "serving at port", PORT
-httpd.serve_forever()
-httpd.handle_request()
-# cp = CP()
-# print cp.schedules("alverca", "azambuja")
+if __name__ == '__main__':
+    PORT = 8000
+
+    httpd = BaseHTTPServer.HTTPServer(("", PORT), Handler)
+    print "serving at port", PORT
+    httpd.serve_forever()
+    httpd.handle_request()
+    # cp = CP()
+    # print cp.schedules("alverca", "azambuja")

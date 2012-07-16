@@ -18,6 +18,7 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
             # redirect stdout to client
             stdout = sys.stdout
             sys.stdout = self.wfile
+            print None
             lePath = urlparse.urlparse(self.path).path[1:]
             leQuery = urlparse.parse_qs(urlparse.urlparse(self.path).query)
             (targetObjectName, z ,targetActionName) = lePath.partition("/")

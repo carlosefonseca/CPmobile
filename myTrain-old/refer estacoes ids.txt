@@ -1,0 +1,647 @@
+Abrantes|9452001
+Abreiro|9415289
+Abrunhosa|9448124
+Adémia : 9436046
+Afife : 9418119
+Agolada : 9480283
+Agualva-Cacém : 9461002
+Águas de Moura : 9492007
+Águas Santas : 9403046
+Aguda : 9439057
+Águeda : 9442218
+Aguieira : 9442267
+Aguim : 9437093
+Albergaria dos Doze : 9434439
+Albergaria-a-Nova : 9444495
+Albergaria-a-Velha : 9444552
+Albufeira - Ferreiras : 9478063
+Alcácer do Sal : 9492338
+Alcáçovas : 9474120
+Alcaide : 9453504
+Alcainça-Moinhos : 9462190
+Alcains : 9453140
+Alcântara-Mar : 9469039
+Alcântara-Terra : 9467025
+Alcantarilha : 9490092
+Alcaria : 9453629
+Aldeia : 9449411
+Alegria : 9411064
+Alfarelos : 9435006
+Alferrarede : 9452068
+Algés : 9469088
+Algoz : 9490050
+Algueirão-Mem Martins : 9461069
+Alhadas : 9445435
+Alhandra : 9431237
+Alhos Vedros : 9495075
+Almancil : 9478253
+Almourol : 9451102
+Alpedrinha : 9453355
+Alvações : 9414084
+Alvalade : 9493096
+Alvarães : 9406338
+Alvega-Ortiga : 9452209
+Alverca : 9431187
+Alvito : 9474351
+Amadora : 9460087
+Amarante : 9413136
+AMEIXIAL : 9483535
+Amial : 9435097
+Amieira : 9464006
+Amoreiras-Odemira : 9477099
+Âncora Praia : 9418150
+Aranha (A) : 9483378
+Arazede : 9445245
+Aregos : 9409191
+Areia - Darque : 9406395
+Arentim : 9429066
+Areosa : 9418044
+Aroeira : 9473486
+Arrifana : 9444248
+Arronches : 9457174
+Arroteia (A) : 9421055
+Assumar : 9457117
+Avanca : 9438216
+Aveiro : 9438000
+Aveiro - Vouga : 9442002
+Aveleda : 9429108
+Azambuja : 9433001
+Azaruja (Ad) : 9483204
+Azinheira dos Barros : 9492775
+Azurva : 9442051
+Bagaúste : 9410058
+Baixa da Banheira : 9495059
+Baraçal : 9448454
+Barca da Amieira -Envendos : 9452415
+Barcelos : 9406122
+Barqueiros : 9409324
+Barquinha : 9451045
+Barragem de Belver : 9452241
+Barreiro : 9495000
+Barreiro-A : 9495026
+Barrimau : 9405058
+Barroselas : 9406304
+Bebedouro : 9445278
+Beja : 9475002
+Belém : 9469054
+Belmonte-Manteigas : 9454197
+Belver : 9452282
+Bencanta : 9435170
+Benespera : 9454338
+Benfica : 9460046
+Benquerenças : 9452878
+Bicanho : 9463974
+Bifurcação de Lares : 9464022
+Bobadela : 9431070
+Boliqueime : 9478147
+Bom João : 9473031
+Bombarral : 9462703
+Bombel : 9471225
+Bouro : 9463081
+Braço de Prata : 9431005
+Braga : 9429157
+Branca : 9444461
+Brunheda : 9415222
+Bustelo : 9408334
+Cabanões : 9442150
+Cabeço de Vide (A) : 9486504
+Cabêda : 9408029
+Cacela : 9473452
+Cachão : 9415420
+Cachofarra : 9468171
+Cacia : 9438075
+Caíde : 9408383
+Cais do Sodré : 9469005
+Caldas da Rainha : 9463008
+Caldas de Moledo : 9409399
+Camarão : 9462661
+Caminha : 9418242
+Campolide : 9460004
+Campolide-A : 9467033
+Campo-Serra : 9463040
+Canal-Caveira : 9492650
+Canas Felgueiras : 9446599
+Canelas : 9438117
+Canha : 9480580
+Caniços : 9428100
+Cantanhede : 9445153
+Carapeços : 9406197
+Carcavelos : 9469187
+Cardiais (A) : 9486132
+Caria : 9454148
+Carrascal-Delongo : 9440030
+Carrazedo : 9414159
+Carreço : 9418085
+Carregado : 9431336
+Carregal do Sal : 9446482
+Carreira : 9406056
+Carriço : 9463834
+Carvalha : 9418416
+Carvalhal da Portela : 9442309
+Carvalheira - Maceda : 9438356
+Carvalhos de Figueiredo : 9440113
+Carvalhosas : 9441079
+Casa Branca : 9474005
+Casais : 9435147
+Casal : 9445229
+Casal do Álvaro : 9442168
+Cascais : 9469260
+Castanheira do Ribatejo : 9431310
+Castanheiro : 9415081
+Castelejo : 9446409
+Castelo Branco : 9453009
+Castelo de Vide : 9458503
+Castelo Mendo : 9449312
+Castelo Novo : 9453314
+Castro Marim : 9473502
+Castro Verde-Almodóvar : 9476000
+Cavaco : 9444172
+Caxarias : 9434330
+Caxias : 9469120
+Ceira : 9441103
+Cela : 9463214
+Celorico da Beira : 9448405
+Cerdeira : 9449205
+Cerejo : 9448561
+Cête : 9408227
+Chança : 9456101
+Chão de Maçãs-Fátima : 9434249
+Chelas : 9466027
+Codeçais : 9415263
+Coimbra : 9441020
+Coimbra B : 9436004
+Coimbra-Parque : 9441038
+Coimbrões : 9439149
+Coina : 9417236
+Comenda (A) : 9483022
+Conceição : 9473379
+Conraria : 9441095
+Contenças : 9448066
+Contumil : 9403004
+Cordinha : 9445112
+Corgo : 9414019
+Corroios : 9417137
+Cortegaça : 9438372
+Coruche : 9480325
+Costeira : 9445393
+Couto de Cambeses : 9429033
+Couto de Cucujães : 9444297
+Coutos (A) : 9486462
+Covas : 9428290
+Covelinhas : 9410090
+Covilhã : 9454007
+Cruz Quebrada : 9469104
+Cruzeiro : 9414183
+Cuba : 9474476
+Cuca : 9428209
+Cunheira : 9458131
+Curia : 9437119
+Curvaceiras : 9440063
+Dagorda - Peniche : 9462802
+Darque : 9406387
+Dois Portos : 9462380
+Donas : 9453520
+Durrães : 9406262
+Eirol : 9442119
+Eixo : 9442077
+Elvas : 9457497
+Entrecampos : 9466050
+Entrecampos - Poente : 9466068
+Entroncamento : 9434009
+Enxofães : 9445088
+Ermesinde : 9404002
+Ermida : 9409258
+Ermidas - Sado : 9493005
+Escapães : 9444222
+Esgueira : 9442028
+Esmeriz : 9405033
+Esmoriz : 9438406
+Espadanal da Azambuja : 9431401
+Espadaneira : 9435162
+Espinho : 9439008
+Espinho-Vouga : 9444016
+Esqueiro : 9418291
+Estarreja : 9438158
+Estômbar-Lagoa : 9490241
+Estoril : 9469245
+ESTREMOZ : 9486009
+Évora : 9483006
+Évora Monte (A) : 9483410
+Famalicão : 9405074
+Famalicão da Nazaré : 9463180
+Fanhais : 9463313
+Faria : 9444271
+Faro : 9473007
+Fatela-Penamacor : 9453462
+Fazenda : 9455327
+Feliteira : 9462364
+Fernando Pó : 9471050
+Ferradosa : 9411114
+Ferragudo : 9490274
+Ferrão : 9410165
+Ferreiros : 9429132
+Fiais da Telha : 9446540
+Figueira da Foz : 9464113
+Figueiredo : 9444412
+Fogueteiro : 9417186
+Folhadal : 9446656
+Fontela : 9464089
+Fontela-A : 9464097
+Formoselha / Santo Varão : 9435030
+Fornos de Algodres : 9448249
+Foros de Amora : 9417152
+Francelos : 9439081
+Fratel : 9452571
+Frechas : 9415453
+Fregim : 9413110
+Fregim-A : 9413102
+Freineda : 9449387
+Freixo de Numão : 9411247
+Fronteira (A) : 9486355
+Funcheira : 9477008
+Fundão : 9453546
+Fungalvaz : 9434199
+Fuseta : 9473205
+Fuseta-A : 9473197
+Gaia : 9439164
+Garraia (A) : 9483063
+Garvão : 9477032
+Gata : 9449049
+General Torres : 9439172
+Giesteira : 9428159
+Godim : 9409423
+Gondarém : 9418325
+Gouveia : 9448165
+Grândola : 9492577
+Granja : 9439040
+Guarda : 9449007
+Guia : 9463800
+Guifões : 9421170
+Guimarães : 9424000
+Irivo : 9408243
+Jerumelo : 9462257
+Juncal : 9409050
+Lagos : 9490464
+Lamarosa : 9434090
+Lapa : 9444057
+Lapa do Lobo : 9446581
+Lardosa : 9453215
+Lares : 9464055
+Latadas : 9415495
+Lavradio : 9495042
+Lavre : 9480515
+Leandro : 9404036
+Leça do Balio : 9421071
+Leça do Balio - Petroquímica : 9421709
+Leiria : 9463560
+Leixões : 9421154
+Liceia : 9445310
+Limede - Cadima : 9445203
+Lisboa Oriente : 9431039
+Lisboa Rossio : 9459006
+Lisboa Santa Apolónia : 9430007
+Litém : 9434504
+Livração : 9408474
+Livramento : 9473239
+Lobases : 9441194
+Lordelo : 9428191
+Loulé : 9478238
+Louriçal : 9463875
+Louro : 9405116
+Lousã : 9441319
+Lousã-A : 9441301
+Lousado : 9405009
+Lousal : 9492809
+Luso Buçaco : 9446094
+Luz : 9473262
+Luzianes : 9477263
+Maçainhas : 9454262
+Maçal do Chão : 9448488
+Macinhata : 9442325
+Madalena : 9439123
+Mafra : 9462166
+Maiorca : 9445443
+Mala : 9445047
+Malhada Sorda : 9449338
+Malveira : 9462224
+Mangualde : 9448009
+Marco de Canaveses : 9409001
+Marinha Grande : 9463461
+Marinhais : 9480127
+Martingança : 9463404
+Marujal : 9465052
+Marvão-Beirã : 9458651
+Marvila : 9466019
+Massamá-Barcarena : 9460137
+Mata : 9456176
+Mato Miranda : 9432383
+Mazagão : 9429116
+Mealhada : 9437051
+Meia Praia : 9490431
+Meinedo : 9408359
+Meiral : 9441293
+Mercês : 9461051
+Messines-Alte : 9477735
+Mexilhoeira Grande : 9490381
+Midões : 9406080
+Mira Sintra - Meleças : 9462042
+Miramar : 9439073
+Miranda do Corvo : 9441228
+Mirandela : 9416006
+Mirão : 9409225
+Miuzela : 9449239
+Mogofores : 9437143
+Moimenta Alcafache : 9446763
+Moinhos : 9441186
+Moita : 9495109
+Moledo do Minho : 9418200
+Monte Abraão : 9460111
+Monte das Flores : 9482214
+Monte de Paramos : 9444040
+Monte dos Lobos : 9446219
+Monte Estoril : 9469252
+Monte Gordo : 9473544
+Monte Novo-Palma : 9492205
+Monte Real : 9463685
+Monte Redondo : 9463735
+Montemor : 9465029
+Morgado : 9480044
+Mortágua : 9446243
+Moscavide : 9431047
+Mosteirô : 9409134
+Mouquim : 9405108
+Mourisca do Vouga : 9442259
+Mouriscas-A : 9452167
+Mourisca-Sado : 9491041
+Muge : 9480077
+Murtede : 9445104
+Muxagata : 9448298
+Nelas : 9446672
+Nespereira : 9428266
+Nine : 9406007
+Noémi : 9449270
+Óbidos : 9462836
+Oeiras : 9469179
+Oiã : 9437275
+Oleiros : 9408250
+Olhão : 9473106
+Oliveira : 9408409
+Oliveira de Azeméis : 9444339
+Oliveira do Bairro : 9437218
+Oliveirinha Cabanas : 9446524
+Oronhe : 9442176
+Ourique : 9476158
+Outeiro : 9462612
+Ovar : 9438299
+Paço de Arcos : 9469146
+Paços de Brandão : 9444107
+Padrão : 9441251
+Paialvo : 9434157
+Pala : 9409100
+Palmela - A : 9468098
+Palmilheira : 9403053
+Pampilhosa : 9437002
+Panóias : 9476216
+Papízios : 9446441
+Parada : 9408201
+Paraimo : 9437184
+Paramos : 9438414
+Parede : 9469203
+Paredes : 9408276
+Parque das Cidades : 9478295
+Passinhos : 9413086
+Patã : 9478105
+Pataias : 9463354
+Paúl : 9462745
+Pedra Furada : 9462133
+Pego : 9446060
+Pegões : 9471126
+Pelariga : 9434702
+Penafiel : 9408318
+Penalva : 9417095
+Penedo Gordo : 9475085
+Penteado : 9495125
+Pereira : 9435055
+Pereiras : 9477461
+Pereirinhas : 9428217
+Pero Negro : 9462315
+Pinhal Novo : 9468007
+Pinhão : 9410249
+Pinheiro : 9492130
+Pinheiro da Bemposta : 9444446
+Pinhel : 9448595
+PK 20,565 - Ramal TER-TIR : 9431617
+PK 21,117 - Ramal TER-TIR : 9431625
+Plataforma de Cacia : 9438034
+Poceirão : 9471001
+Pocinho : 9412005
+Poço Barreto : 9490134
+Pombal : 9434645
+Ponte de Sôr : 9455293
+Porta Nova : 9473338
+Portalegre : 9457000
+Portela : 9404101
+Portela de Sintra : 9461093
+Portimão : 9490290
+Porto Campanhã : 9402006
+Porto Rei : 9409282
+Porto São Bento : 9401008
+Póvoa : 9431146
+Povoação : 9414126
+Praça do Quebedo : 9468130
+Pragal : 9417087
+Praia do Ribatejo : 9451128
+Praias-Sado : 9491009
+Praias-Sado-A : 9491058
+Prilhão-Casais : 9441350
+Queluz-Belas : 9460103
+Quinta da Ponte : 9441087
+Quinta do Valongo - Vacariça : 9446045
+Quinta Grande : 9480358
+Quintans : 9437358
+Ramalhal : 9462547
+Reboleira : 9460095
+Recarei - Sobreira : 9408177
+Recesinhos : 9408441
+Rede : 9409357
+Régua : 9410009
+Regueira de Pontes : 9463610
+Reguengo - Vale da Pedra - Pontével : 9433084
+Retaxo : 9452845
+Reveles : 9465128
+Riachos - Torres Novas - Golegã : 9432466
+Rib. do Freixo (A) : 9486587
+Ribeira de Seiça : 9463925
+Ribeirinha : 9415347
+Rio de Mouro : 9461044
+Rio Meão : 9444115
+Rio Tinto : 9403038
+Rochoso : 9449163
+Ródão : 9452647
+Roma - Areeiro : 9466035
+Ruílhe : 9429074
+Runa : 9462422
+Sabugal : 9454429
+Sabugo : 9462091
+Sacavém : 9431062
+Salgueirinha : 9480408
+Salir do Porto : 9463107
+Salreu : 9438125
+Sampaio-Oleiros : 9444073
+Sanfins : 9444198
+Santa Cita : 9440105
+Santa Clara-Sabóia : 9477388
+Santa Comba Dão : 9446367
+Santa Cruz/Damaia : 9460038
+Santa Eulália-A : 9457315
+Santa Iria : 9431112
+Santa Luzia : 9415149
+Santa Margarida : 9451185
+Santa Vitória-Ervidel : 9475176
+Santana - Ferreira : 9445351
+Santana Cartaxo : 9432045
+Santarém : 9432185
+Santiago de Riba-Ul : 9444313
+Santo Amaro : 9469161
+Santo Isidoro : 9413037
+Santo Tirso : 9428068
+Santos : 9469013
+São Bartolomeu da Serra : 9494227
+São Frutuoso : 9404051
+São Gemil : 9421006
+São João da Madeira : 9444255
+São João das Craveiras : 9471159
+São João de Loure : 9442093
+São João de Ver : 9444156
+São João do Estoril : 9469237
+São José : 9441053
+São Lourenço : 9415164
+São Mamede : 9462786
+São Mamede de Infesta : 9421048
+São Mamede do Tua : 9410363
+São Marcos : 9477594
+São Martinho do Campo : 9408102
+São Martinho do Porto : 9463131
+São Pedro da Torre : 9418440
+São Pedro do Estoril : 9469229
+São Romão : 9404077
+São Torcato : 9480465
+Sapataria : 9462299
+Sarnadas : 9452803
+Seiça-Ourém : 9434264
+Seixas : 9418275
+Senhora da Agonia : 9418234
+Senhora das Neves : 9406312
+Sernada do Vouga : 9443000
+Serpins : 9441376
+Sete Rios : 9466076
+Setil : 9432003
+Setúbal : 9468122
+Setúbal-Mar : 9468155
+Silva : 9406155
+Silva - Feiteira : 9445062
+Silvalde : 9438422
+Silvalde-Vouga : 9444032
+Silveirona (A) : 9486074
+Silves : 9490183
+Simões : 9434744
+Sintra : 9461101
+Soalheira : 9453264
+Sobral : 9448728
+Soito : 9446185
+Somincor : 9492478
+Soudos - Vila Nova : 9440014
+Soure : 9434801
+Sousa da Sé (A) : 9483113
+SOUSEL : 9486199
+Souselas : 9436087
+SRA.DORES (Inactivo) : 9404135
+Sto.Amaro-Veiros(A) : 9486306
+Suzão : 9408060
+Tadim : 9429090
+Taipa - Requeixo : 9442127
+Tamel : 9406213
+Tancos : 9451086
+Tanha : 9414043
+Tarana : 9416014
+Taveiro : 9435139
+Tavira : 9473320
+Telhada : 9463958
+Telhal : 9462067
+Terminal de Mercadorias da Bobadela : 9431120
+Terminal de Mercadorias do Fundão : 9453579
+Terronhas : 9408136
+TER-TIR : 9431807
+Tojeirinha : 9452738
+Tomar : 9440154
+Torre da Gadanha : 9472199
+Torre das Vargens : 9456002
+Torres Vedras : 9462471
+Tortosendo : 9453678
+Trajinha : 9448652
+Tralhão : 9415180
+Tralhariz : 9415057
+Tramagal : 9451243
+Trancoso : 9408151
+Travagem : 9404010
+Travanca-Macinhata : 9444396
+Travassô : 9442135
+Trémoa : 9441152
+Trezói : 9446136
+Triagem da Siderurgia Nacional : 9481034
+Triagem Porto de Aveiro : 9438604
+Trofa : 9404630
+Tua : 9411007
+Tunes : 9478006
+Ul : 9444362
+Urgueiras : 9444537
+Urgueiriça : 9446623
+Valadares : 9439115
+Valado : 9463263
+Valbom : 9413052
+Vale da Rosa : 9491033
+Vale de Açor : 9441129
+Vale de Figueira : 9432284
+Vale de Guizo : 9492437
+Vale de Judeu : 9478196
+Vale de Prazeres : 9453397
+Vale de Santarém : 9432102
+Vale do Peso : 9458305
+Vale do Peso-A : 9458271
+Vale Pereiro (A) : 9483253
+Válega : 9438240
+Valença : 9407005
+Valongo : 9408086
+Valongo-Vouga : 9442291
+Vargelas : 9411148
+Venda do Alcaide : 9468049
+Vendas Novas : 9472009
+Vermoil : 9434553
+Verride : 9465086
+Vesúvio : 9411197
+Viana : 9474203
+Viana do Castelo : 9418002
+Vidigal : 9480655
+Vila Boa Mondego : 9448330
+Vila Caiz : 9413078
+Vila da Feira : 9444206
+Vila das Aves : 9428134
+Vila Fernando : 9449114
+Vila Franca das Naves : 9448546
+Vila Franca de Xira : 9431278
+Vila Garcia : 9449072
+Vila Meã : 9408433
+Vila Nova da Baronia : 9474278
+Vila Nova da Cerveira : 9418341
+Vila Nova da Raínha : 9431377
+Vila Nova de Anços : 9434868
+Vila Pouca do Campo : 9435105
+Vila Real : 9414266
+Vila Real de Stº António : 9473569
+Vilar Formoso : 9449460
+Vilarinho : 9415388
+Vilela - Fornos : 9436053
+VIMIEIRO : 9483337
+Virtudes : 9433043
+Vizela : 9428233
+Zibreira : 9462331

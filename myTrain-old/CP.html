@@ -1,0 +1,89 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module CP</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>CP</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/carlos/Dropbox/Code/CPMobile/myTrain/CP.py">/Users/carlos/Dropbox/Code/CPMobile/myTrain/CP.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cgi.html">cgi</a><br>
+<a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="sqlite3.html">sqlite3</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="urlparse.html">urlparse</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="CP.html#CP">CP</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CP">class <strong>CP</strong></a></font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CP-details"><strong>details</strong></a>(self, requestID, index)</dt><dd><tt>Returns&nbsp;details&nbsp;(stops&nbsp;and&nbsp;respective&nbsp;times&nbsp;and&nbsp;trainid)&nbsp;for&nbsp;a&nbsp;specified&nbsp;result&nbsp;of&nbsp;a&nbsp;schedule&nbsp;request<br>
+&nbsp;<br>
+Arguments:<br>
+requestID&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;identifier&nbsp;returned&nbsp;on&nbsp;the&nbsp;schedules&nbsp;method<br>
+index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;index&nbsp;i&nbsp;of&nbsp;the&nbsp;entry&nbsp;returned&nbsp;by&nbsp;the&nbsp;schedules&nbsp;method<br>
+&nbsp;<br>
+Returns:<br>
+Ordered&nbsp;list&nbsp;of&nbsp;trains&nbsp;needed&nbsp;to&nbsp;make&nbsp;the&nbsp;trip&nbsp;specified.<br>
+Each&nbsp;train&nbsp;contains&nbsp;type,&nbsp;train&nbsp;number&nbsp;and&nbsp;a&nbsp;list&nbsp;of&nbsp;stops&nbsp;and&nbsp;respective&nbsp;arrival&nbsp;hours</tt></dd></dl>
+
+<dl><dt><a name="CP-e"><strong>e</strong></a>(self, txt)</dt><dd><tt>Generates&nbsp;an&nbsp;error&nbsp;object&nbsp;with&nbsp;the&nbsp;specified&nbsp;message</tt></dd></dl>
+
+<dl><dt><a name="CP-getCookie"><strong>getCookie</strong></a>(self, rid)</dt><dd><tt>Gets&nbsp;a&nbsp;cookie&nbsp;with&nbsp;the&nbsp;specified&nbsp;id</tt></dd></dl>
+
+<dl><dt><a name="CP-handle"><strong>handle</strong></a>(self, action, args, output<font color="#909090">='jsonf'</font>)</dt><dd><tt>Handles&nbsp;commands&nbsp;from&nbsp;the&nbsp;webserver,&nbsp;runs&nbsp;the&nbsp;appropriate&nbsp;method&nbsp;and&nbsp;returns&nbsp;the&nbsp;data&nbsp;in&nbsp;the&nbsp;specified&nbsp;format<br>
+&nbsp;<br>
+Arguments:<br>
+action&nbsp;&nbsp;--&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;method&nbsp;(available:&nbsp;schedules,&nbsp;details)<br>
+args&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;parameters&nbsp;as&nbsp;created&nbsp;by&nbsp;BaseHTTPServer<br>
+output&nbsp;&nbsp;--&nbsp;the&nbsp;format&nbsp;for&nbsp;the&nbsp;output&nbsp;data;&nbsp;the&nbsp;default&nbsp;is&nbsp;jsonf&nbsp;for&nbsp;indented&nbsp;json,&nbsp;anything&nbsp;else&nbsp;returns&nbsp;unindented&nbsp;json</tt></dd></dl>
+
+<dl><dt><a name="CP-schedules"><strong>schedules</strong></a>(self, origin, destination, date<font color="#909090">=''</font>, hour<font color="#909090">=''</font>)</dt><dd><tt>Returns&nbsp;a&nbsp;set&nbsp;of&nbsp;train&nbsp;schedules&nbsp;that&nbsp;fit&nbsp;the&nbsp;parameters<br>
+&nbsp;<br>
+Arguments:<br>
+origin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;departure&nbsp;train&nbsp;station<br>
+destination&nbsp;--&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;arrival&nbsp;train&nbsp;station<br>
+date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;day&nbsp;for&nbsp;the&nbsp;trip&nbsp;(format:&nbsp;YYYY-MM-DD)&nbsp;(default:&nbsp;current&nbsp;day)<br>
+hour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;the&nbsp;hour&nbsp;for&nbsp;the&nbsp;trip,&nbsp;with&nbsp;a&nbsp;margin&nbsp;of&nbsp;+/-2h&nbsp;before&nbsp;and&nbsp;after&nbsp;(default:&nbsp;current&nbsp;hour&nbsp;is&nbsp;date&nbsp;is&nbsp;not&nbsp;specified,&nbsp;empty&nbsp;string&nbsp;(all&nbsp;day)&nbsp;otherwise)<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Oject&nbsp;with&nbsp;the&nbsp;parameters&nbsp;used<br>
+-&nbsp;The&nbsp;requestID&nbsp;for&nbsp;subsequent&nbsp;details&nbsp;requests<br>
+-&nbsp;List&nbsp;of&nbsp;results,&nbsp;objects&nbsp;with&nbsp;departure&nbsp;and&nbsp;arrival&nbsp;hours,&nbsp;type&nbsp;of&nbsp;train&nbsp;and&nbsp;the&nbsp;index&nbsp;for&nbsp;a&nbsp;subsequent&nbsp;details&nbsp;request</tt></dd></dl>
+
+<dl><dt><a name="CP-setCookie"><strong>setCookie</strong></a>(self, rID, cookies)</dt><dd><tt>Stores&nbsp;a&nbsp;cookie&nbsp;with&nbsp;the&nbsp;specified&nbsp;id.&nbsp;Only&nbsp;keeps&nbsp;the&nbsp;most&nbsp;recent&nbsp;100&nbsp;entries</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>cookies</strong> = []</dl>
+
+<dl><dt><strong>headers</strong> = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) A....19 (KHTML, like Gecko) Version/6.0 Safari/536.19'}</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

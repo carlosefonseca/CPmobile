@@ -15,6 +15,6 @@ test_thing = Resource(handler=TestThing, **ad)
 # url(r'^other/(?P<username>[^/]+)/(?P<data>.+)/$', arbitrary_resource), 
  
 urlpatterns = patterns('',
-	(r'^test$', test_thing)
+	(r'^test/(?P<var1>[^/]+)$', test_thing)
 )
 

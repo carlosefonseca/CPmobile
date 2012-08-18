@@ -1,4 +1,5 @@
 from piston.handler import BaseHandler
+from piston.utils import rc 
 
 import cgi, random, sys
 import urlparse
@@ -154,6 +155,11 @@ class CP(BaseHandler):
             except:
                 result = self.e("Parameters 'requestid' and 'index' are required.")
 
+        else:
+            result = self.e("Invalid or unspecified action. Valid actions for CP are: 'schedules' and 'details'.")
+            # return { "a":"b"}
+            # return rc.BAD_REQUEST
+
 
         if (result != None):
             return result
@@ -165,7 +171,10 @@ class CP(BaseHandler):
 
     def e(self, txt):
         """Generates an error object with the specified message"""
-        return {"error":txt}
+        resp = rc.BAD_REQUEST
+        resp.content = {"error":txt}
+        return resp
+
 
 
 

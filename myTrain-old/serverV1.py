@@ -31,7 +31,7 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    PORT = 8080
+    PORT = 8000
 
     httpd = BaseHTTPServer.HTTPServer(("", PORT), Handler)
     print "serving at port", PORT

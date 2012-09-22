@@ -2,22 +2,19 @@ from django.conf.urls.defaults import *
 from piston.resource import Resource
 from piston.authentication import HttpBasicAuthentication
 
-from CP import CP
-from Refer import Refer
+from LeHandler import LeHandler
 
 auth = HttpBasicAuthentication(realm="My Realm")
 ad = {  }
 
 # blogpost_resource = Resource(handler=BlogPostHandler, **ad)
 # arbitrary_resource = Resource(handler=ArbitraryDataHandler, **ad)
-cp_resource = Resource(handler=CP, **ad)
-refer_resource = Resource(handler=Refer, **ad)
+handler_resource = Resource(handler=LeHandler, **ad)
 
 # url(r'^posts/(?P<post_slug>[^/]+)/$', blogpost_resource), 
 # url(r'^other/(?P<username>[^/]+)/(?P<data>.+)/$', arbitrary_resource), 
  
 urlpatterns = patterns('',
-	(r'^cp/(?P<action>[^/?]*)/?$', cp_resource),
-	(r'^refer/(?P<action>[^/?]*)/?$', refer_resource)
+	(r'^(?P<action>[^/?]*)/?$', handler_resource)
 )
 

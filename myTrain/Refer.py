@@ -1,7 +1,4 @@
-from piston.handler import BaseHandler
-from piston.utils import rc
-
-import cgi, random, sys
+import random, sys
 import urlparse
 from datetime import datetime
 import requests
@@ -11,7 +8,7 @@ import sqlite3
 
 from bs4 import BeautifulSoup
 
-class Refer(BaseHandler):
+class Refer:
 	"""Handles parsing of http://refer.pt pages"""
 
 	methods_allowed = ('GET',)
@@ -84,6 +81,6 @@ class Refer(BaseHandler):
 		resp.content = {"error":txt}
 		return resp
 
-r = Refer()
+# r = Refer()
 # res = r.departures(9431039)
 # print res

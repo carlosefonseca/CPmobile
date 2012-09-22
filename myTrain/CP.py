@@ -1,7 +1,4 @@
-from piston.handler import BaseHandler
-from piston.utils import rc 
-
-import cgi, random, sys
+import random, sys
 import urlparse
 from datetime import datetime
 import requests
@@ -11,7 +8,7 @@ import sqlite3
 
 from bs4 import BeautifulSoup
 
-class CP(BaseHandler):
+class CP:
     methods_allowed = ('GET',)
 
     cookies = []

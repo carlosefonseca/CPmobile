@@ -141,12 +141,9 @@ class CP(BaseHandler):
         result = None
         if action == "schedules":
             try:
-                if "day" in args:
-                    result = self.schedules(args["departure"], args["arrival"], args["day"])
-                else:
-                    result = self.schedules(args["departure"], args["arrival"])
+                result = self.schedules(args["departure"], args["arrival"], args["date"] if "date" in args else "", args["hour"] if "hour" in args else "")
             except:
-                result = self.e("Parameters 'departure' and 'arrival' are required. 'day' and 'hour' are optional.")
+                result = self.e("Parameters 'departure' and 'arrival' are required. 'date' and 'hour' are optional.")
 
 
         elif action == "details":

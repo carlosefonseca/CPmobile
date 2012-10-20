@@ -87,6 +87,10 @@ class CP(BaseHandler):
         Each train contains type, train number and a list of stops and respective arrival hours
         """
         cks = self.getCookie(requestID)
+        if (not cks):
+            return self.e("cookie not found")
+        else:
+            return self.e(cks)
         r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'})
         f = open('out.html', 'w')
         f.write(r2.content)
@@ -154,6 +158,7 @@ class CP(BaseHandler):
                 result = self.details(args["requestid"], args["index"])
             except:
                 result = self.e("Parameters 'requestid' and 'index' are required.")
+#                raise
 
         else:
             result = self.e("Invalid or unspecified action. Valid actions for CP are: 'schedules' and 'details'.")

@@ -19,9 +19,11 @@ class Refer(BaseHandler):
 	def departures(self, stationId):
 		""" Returns a list of trains that are about to leave the specified station """
 
-		r = requests.get("http://www.refer.pt/MenuPrincipal/Passageiros/PartidaseChegadas.aspx?stationid="+str(stationId)+"&Type=Arrivals")
+		r = requests.get("http://www.refer.pt/MenuPrincipal/Passageiros/PartidaseChegadas.aspx?stationid="+str(stationId)+"&Type=Departures")
 
 		soup = BeautifulSoup(r.text)
+		if (len(soup.find_all("div", {"id":"dnn_ctr569_TrainArrivalsAndDepartures_pnlMessage"})) > 0):
+			return [];
 		leTable = soup.find_all("div", {"class":"mod-table-values"})[0].table
 		
 		rows = leTable.find_all("tr")

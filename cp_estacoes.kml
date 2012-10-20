@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.x">
+<Document>
+<Placemark><name>abrantes</name><Point><coordinates>-8.199936,39.461371,0</coordinates></Point></Placemark>
+<Placemark><name>abrunhosa</name><Point><coordinates>-7.64163,40.578339,0</coordinates></Point></Placemark>
+<Placemark><name>ademia</name><Point><coordinates>-8.4503,40.2512,0</coordinates></Point></Placemark>
+<Placemark><name>afife</name><Point><coordinates>-8.86069,41.780449,0</coordinates></Point></Placemark>
+<Placemark><name>agualva-cacem</name><Point><coordinates>-9.2921,38.771431,0</coordinates></Point></Placemark>
+<Placemark><name>aguas santas</name><Point><coordinates>-8.56448,41.203831,0</coordinates></Point></Placemark>
+<Placemark><name>aguda</name><Point><coordinates>-8.65126,41.050308,0</coordinates></Point></Placemark>
+<Placemark><name>agueda</name><Point><coordinates>-8.448824,40.57596,0</coordinates></Point></Placemark>
+<Placemark><name>aguieira</name><Point><coordinates>-8.20475,40.337791,0</coordinates></Point></Placemark>
+<Placemark><name>aguim</name><Point><coordinates>-8.4488,40.410789,0</coordinates></Point></Placemark>
+<Placemark><name>albergaria dos doze</name><Point><coordinates>-8.58355,39.797131,0</coordinates></Point></Placemark>
+<Placemark><name>albergaria-a-nova</name><Point><coordinates>-8.49152,40.743542,0</coordinates></Point></Placemark>
+<Placemark><name>albergaria-a-velha</name><Point><coordinates>-8.479444,40.69287,0</coordinates></Point></Placemark>
+<Placemark><name>albufeira</name><Point><coordinates>-8.257574,37.085278,0</coordinates></Point></Placemark>
+<Placemark><name>alcacer do sal</name><Point><coordinates>-8.508081,38.372938,0</coordinates></Point></Placemark>
+<Placemark><name>alcacovas</name><Point><coordinates>-8.15728,38.392941,0</coordinates></Point></Placemark>
+<Placemark><name>alcaide</name><Point><coordinates>-7.43768,40.131531,0</coordinates></Point></Placemark>
+<Placemark><name>alcainca-moinhos</name><Point><coordinates>-8.178758,41.284752,0</coordinates></Point></Placemark>
+<Placemark><name>alcains</name><Point><coordinates>-7.45783,39.915588,0</coordinates></Point></Placemark>
+<Placemark><name>alcantara-mar</name><Point><coordinates>-8.472375,41.493958,0</coordinates></Point></Placemark>
+<Placemark><name>alcantara-terra</name><Point><coordinates>-8.147405,40.174044,0</coordinates></Point></Placemark>
+<Placemark><name>alcantarilha</name><Point><coordinates>-8.34676,37.128811,0</coordinates></Point></Placemark>
+<Placemark><name>alcaria</name><Point><coordinates>-7.51925,40.20015,0</coordinates></Point></Placemark>
+<Placemark><name>aldeia</name><Point><coordinates>-8.97285,39.108501,0</coordinates></Point></Placemark>
+<Placemark><name>alegria</name><Point><coordinates>-8.29725,41.407631,0</coordinates></Point></Placemark>
+<Placemark><name>alfarelos</name><Point><coordinates>-8.65445,40.15255,0</coordinates></Point></Placemark>
+<Placemark><name>alferrarede</name><Point><coordinates>-8.18861,39.478901,0</coordinates></Point></Placemark>
+<Placemark><name>alges</name><Point><coordinates>-9.23207,38.69875,0</coordinates></Point></Placemark>
+<Placemark><name>algoz</name><Point><coordinates>-8.30409,37.16399,0</coordinates></Point></Placemark>
+<Placemark><name>algueirao-mem martins</name><Point><coordinates>-9.34221,38.802921,0</coordinates></Point></Placemark>
+<Placemark><name>alhandra</name><Point><coordinates>-9.00679,38.92783,0</coordinates></Point></Placemark>
+<Placemark><name>alhos vedros</name><Point><coordinates>-9.02495,38.65313,0</coordinates></Point></Placemark>
+<Placemark><name>almancil</name><Point><coordinates>-8.0334,37.08783,0</coordinates></Point></Placemark>
+<Placemark><name>almourol</name><Point><coordinates>-8.3744,39.4624,0</coordinates></Point></Placemark>
+<Placemark><name>alpedrinha</name><Point><coordinates>-7.4655,40.099251,0</coordinates></Point></Placemark>
+<Placemark><name>alvalade</name><Point><coordinates>-8.39352,37.932281,0</coordinates></Point></Placemark>
+<Placemark><name>alvaraes</name><Point><coordinates>-8.74692,41.64642,0</coordinates></Point></Placemark>
+<Placemark><name>alvega-ortiga</name><Point><coordinates>-8.019998,39.485821,0</coordinates></Point></Placemark>
+<Placemark><name>alverca</name><Point><coordinates>-9.03975,38.89996,0</coordinates></Point></Placemark>
+<Placemark><name>alvito</name><Point><coordinates>-7.991675,38.257363,0</coordinates></Point></Placemark>
+<Placemark><name>amadora</name><Point><coordinates>-9.237849,38.75931,0</coordinates></Point></Placemark>
+<Placemark><name>amial</name><Point><coordinates>-8.61613,41.176922,0</coordinates></Point></Placemark>
+<Placemark><name>amieira</name><Point><coordinates>-7.55718,38.285591,0</coordinates></Point></Placemark>
+<Placemark><name>amoreiras-odemira</name><Point><coordinates>-8.37468,37.669239,0</coordinates></Point></Placemark>
+<Placemark><name>ancora praia</name><Point><coordinates>-27.971699,39.051535,0</coordinates></Point></Placemark>
+<Placemark><name>areeiro</name><Point><coordinates>-27.112061,38.742538,0</coordinates></Point></Placemark>
+<Placemark><name>aregos</name><Point><coordinates>-8.00762,41.10652,0</coordinates></Point></Placemark>
+<Placemark><name>areia-darque</name><Point><coordinates>-8.79264,41.648209,0</coordinates></Point></Placemark>
+<Placemark><name>arentim</name><Point><coordinates>-8.51473,41.486691,0</coordinates></Point></Placemark>
+<Placemark><name>areosa</name><Point><coordinates>-8.58223,41.183899,0</coordinates></Point></Placemark>
+<Placemark><name>arrifana</name><Point><coordinates>-8.278,40.231998,0</coordinates></Point></Placemark>
+<Placemark><name>arronches</name><Point><coordinates>-7.280174,39.124902,0</coordinates></Point></Placemark>
+<Placemark><name>assumar</name><Point><coordinates>-7.39331,39.140148,0</coordinates></Point></Placemark>
+<Placemark><name>avanca</name><Point><coordinates>-8.57079,40.806751,0</coordinates></Point></Placemark>
+<Placemark><name>aveiro</name><Point><coordinates>-8.654413,40.641206,0</coordinates></Point></Placemark>
+<Placemark><name>aveleda</name><Point><coordinates>-6.69699,41.890572,0</coordinates></Point></Placemark>
+<Placemark><name>azambuja</name><Point><coordinates>-8.871338,39.068132,0</coordinates></Point></Placemark>
+<Placemark><name>azinheira dos barros</name><Point><coordinates>-8.4109,38.097141,0</coordinates></Point></Placemark>
+<Placemark><name>azurva</name><Point><coordinates>-8.59409,40.637661,0</coordinates></Point></Placemark>
+<Placemark><name>badajoz</name><Point><coordinates>-6.981680,38.89078,0</coordinates></Point></Placemark>
+<Placemark><name>baixa da banheira</name><Point><coordinates>-9.04554,38.66016,0</coordinates></Point></Placemark>
+<Placemark><name>baracal</name><Point><coordinates>-7.09708,40.3964,0</coordinates></Point></Placemark>
+<Placemark><name>barca da amieira-envendos</name><Point><coordinates>-7.876152,39.568738,0</coordinates></Point></Placemark>
+<Placemark><name>barcelos</name><Point><coordinates>-8.615204,41.53449,0</coordinates></Point></Placemark>
+<Placemark><name>barqueiros</name><Point><coordinates>-8.7303,41.48909,0</coordinates></Point></Placemark>
+<Placemark><name>barquinha</name><Point><coordinates>-8.43123,39.450298,0</coordinates></Point></Placemark>
+<Placemark><name>barragem de belver</name><Point><coordinates>-8.00124,39.481258,0</coordinates></Point></Placemark>
+<Placemark><name>barreiro</name><Point><coordinates>-9.077424,38.661365,0</coordinates></Point></Placemark>
+<Placemark><name>barreiro-a</name><Point><coordinates>-8.127004,41.361169,0</coordinates></Point></Placemark>
+<Placemark><name>barrimau</name><Point><coordinates>-8.4483,41.482239,0</coordinates></Point></Placemark>
+<Placemark><name>barroselas</name><Point><coordinates>-8.70238,41.647308,0</coordinates></Point></Placemark>
+<Placemark><name>beja</name><Point><coordinates>-7.866549,38.01871,0</coordinates></Point></Placemark>
+<Placemark><name>belem</name><Point><coordinates>-9.20589,38.697041,0</coordinates></Point></Placemark>
+<Placemark><name>belver</name><Point><coordinates>-7.27554,41.2467,0</coordinates></Point></Placemark>
+<Placemark><name>bemposta</name><Point><coordinates>-8.13937,39.352482,0</coordinates></Point></Placemark>
+<Placemark><name>bencanta</name><Point><coordinates>-8.46116,40.213558,0</coordinates></Point></Placemark>
+<Placemark><name>benfica</name><Point><coordinates>-9.19743,38.750881,0</coordinates></Point></Placemark>
+<Placemark><name>benquerencas</name><Point><coordinates>-7.57665,39.790699,0</coordinates></Point></Placemark>
+<Placemark><name>bifurcacao de lares</name><Point><coordinates>-8.780597,40.127093,0</coordinates></Point></Placemark>
+<Placemark><name>bobadela</name><Point><coordinates>-9.10002,38.812099,0</coordinates></Point></Placemark>
+<Placemark><name>boliqueime</name><Point><coordinates>-8.15936,37.134171,0</coordinates></Point></Placemark>
+<Placemark><name>bom joao</name><Point><coordinates>-7.92208,37.01384,0</coordinates></Point></Placemark>
+<Placemark><name>bombarral</name><Point><coordinates>-9.159815,39.265308,0</coordinates></Point></Placemark>
+<Placemark><name>braco de prata</name><Point><coordinates>-9.09989,38.752541,0</coordinates></Point></Placemark>
+<Placemark><name>braga</name><Point><coordinates>-8.429134,41.551625,0</coordinates></Point></Placemark>
+<Placemark><name>branca</name><Point><coordinates>-8.59054,38.8512,0</coordinates></Point></Placemark>
+<Placemark><name>bustelo</name><Point><coordinates>-7.9981,41.237949,0</coordinates></Point></Placemark>
+<Placemark><name>cabanoes</name><Point><coordinates>-8.60081,40.871021,0</coordinates></Point></Placemark>
+<Placemark><name>cabeda</name><Point><coordinates>-7.5598,41.30608,0</coordinates></Point></Placemark>
+<Placemark><name>cacela</name><Point><coordinates>-7.5486,37.162441,0</coordinates></Point></Placemark>
+<Placemark><name>cacem</name><Point><coordinates>-9.30868,38.77129,0</coordinates></Point></Placemark>
+<Placemark><name>cachao</name><Point><coordinates>-7.16555,41.383991,0</coordinates></Point></Placemark>
+<Placemark><name>cacia</name><Point><coordinates>-8.59662,40.683769,0</coordinates></Point></Placemark>
+<Placemark><name>caide</name><Point><coordinates>-8.22433,41.267159,0</coordinates></Point></Placemark>
+<Placemark><name>cais do sodre</name><Point><coordinates>-9.14839,38.706478,0</coordinates></Point></Placemark>
+<Placemark><name>caldas da rainha</name><Point><coordinates>-9.136839,39.409268,0</coordinates></Point></Placemark>
+<Placemark><name>caldas de moledo</name><Point><coordinates>-7.82675,41.154758,0</coordinates></Point></Placemark>
+<Placemark><name>camarao</name><Point><coordinates>-8.085516,39.484993,0</coordinates></Point></Placemark>
+<Placemark><name>caminha</name><Point><coordinates>-8.838379,41.875725,0</coordinates></Point></Placemark>
+<Placemark><name>campo-serra</name><Point><coordinates>-8.61143,41.591759,0</coordinates></Point></Placemark>
+<Placemark><name>campolide</name><Point><coordinates>-9.16255,38.73106,0</coordinates></Point></Placemark>
+<Placemark><name>canal-caveira</name><Point><coordinates>-8.49097,38.13652,0</coordinates></Point></Placemark>
+<Placemark><name>canas-felgueira</name><Point><coordinates>-8.13634,41.472198,0</coordinates></Point></Placemark>
+<Placemark><name>canelas</name><Point><coordinates>-8.31721,41.078079,0</coordinates></Point></Placemark>
+<Placemark><name>canicos</name><Point><coordinates>-8.48026,40.800678,0</coordinates></Point></Placemark>
+<Placemark><name>carapecos</name><Point><coordinates>-8.6384,41.582409,0</coordinates></Point></Placemark>
+<Placemark><name>carcavelos</name><Point><coordinates>-9.33154,38.69017,0</coordinates></Point></Placemark>
+<Placemark><name>carrascal-delongo</name><Point><coordinates>-8.452325,39.546509,0</coordinates></Point></Placemark>
+<Placemark><name>carreco</name><Point><coordinates>-8.86313,41.74472,0</coordinates></Point></Placemark>
+<Placemark><name>carregado</name><Point><coordinates>-8.97804,39.02314,0</coordinates></Point></Placemark>
+<Placemark><name>carregal do sal</name><Point><coordinates>-7.999808,40.434466,0</coordinates></Point></Placemark>
+<Placemark><name>carreira</name><Point><coordinates>-8.46892,41.299969,0</coordinates></Point></Placemark>
+<Placemark><name>carrico</name><Point><coordinates>-8.80114,39.987652,0</coordinates></Point></Placemark>
+<Placemark><name>carvalha</name><Point><coordinates>-8.44365,41.77895,0</coordinates></Point></Placemark>
+<Placemark><name>carvalhal portela</name><Point><coordinates>-8.63329,41.5116,0</coordinates></Point></Placemark>
+<Placemark><name>carvalheira-maceda</name><Point><coordinates>-8.615584,40.918965,0</coordinates></Point></Placemark>
+<Placemark><name>carvalhos de figueiredo</name><Point><coordinates>-8.39538,39.576111,0</coordinates></Point></Placemark>
+<Placemark><name>casais</name><Point><coordinates>-7.90391,39.742279,0</coordinates></Point></Placemark>
+<Placemark><name>casal alvaro</name><Point><coordinates>-7.965362,39.975422,0</coordinates></Point></Placemark>
+<Placemark><name>cascais</name><Point><coordinates>-9.420389,38.696691,0</coordinates></Point></Placemark>
+<Placemark><name>castanheira do ribatejo</name><Point><coordinates>-8.97052,38.99382,0</coordinates></Point></Placemark>
+<Placemark><name>castelejo</name><Point><coordinates>-7.5778,40.123531,0</coordinates></Point></Placemark>
+<Placemark><name>castelo branco</name><Point><coordinates>-7.492884,39.82294,0</coordinates></Point></Placemark>
+<Placemark><name>castelo de vide</name><Point><coordinates>-7.453448,39.413581,0</coordinates></Point></Placemark>
+<Placemark><name>castelo mendo</name><Point><coordinates>-6.94894,40.59409,0</coordinates></Point></Placemark>
+<Placemark><name>castelo novo</name><Point><coordinates>-7.49347,40.078232,0</coordinates></Point></Placemark>
+<Placemark><name>castro marim</name><Point><coordinates>-7.443679,37.217428,0</coordinates></Point></Placemark>
+<Placemark><name>castro verde-almodovar</name><Point><coordinates>-8.061837,37.511688,0</coordinates></Point></Placemark>
+<Placemark><name>cavaco</name><Point><coordinates>-8.54295,40.93718,0</coordinates></Point></Placemark>
+<Placemark><name>caxarias</name><Point><coordinates>-8.53354,39.70797,0</coordinates></Point></Placemark>
+<Placemark><name>caxias</name><Point><coordinates>-9.27775,38.699982,0</coordinates></Point></Placemark>
+<Placemark><name>cela</name><Point><coordinates>-8.35004,40.988071,0</coordinates></Point></Placemark>
+<Placemark><name>celorico da beira</name><Point><coordinates>-7.392859,40.635773,0</coordinates></Point></Placemark>
+<Placemark><name>cerdeira</name><Point><coordinates>-7.93878,40.258331,0</coordinates></Point></Placemark>
+<Placemark><name>cete</name><Point><coordinates>-8.35589,41.17247,0</coordinates></Point></Placemark>
+<Placemark><name>chanca</name><Point><coordinates>-8.47105,40.04213,0</coordinates></Point></Placemark>
+<Placemark><name>chelas</name><Point><coordinates>-9.11255,38.757431,0</coordinates></Point></Placemark>
+<Placemark><name>coimbra</name><Point><coordinates>-8.416345,40.210812,0</coordinates></Point></Placemark>
+<Placemark><name>coimbra-b</name><Point><coordinates>-8.884182,39.897708,0</coordinates></Point></Placemark>
+<Placemark><name>coimbroes</name><Point><coordinates>-8.63505,41.114159,0</coordinates></Point></Placemark>
+<Placemark><name>conceicao</name><Point><coordinates>-8.24102,37.774109,0</coordinates></Point></Placemark>
+<Placemark><name>contencas</name><Point><coordinates>-8.34365,40.32737,0</coordinates></Point></Placemark>
+<Placemark><name>contumil</name><Point><coordinates>-8.51837,40.790199,0</coordinates></Point></Placemark>
+<Placemark><name>cortegaca</name><Point><coordinates>-8.12938,40.908199,0</coordinates></Point></Placemark>
+<Placemark><name>coruche</name><Point><coordinates>-8.52631,38.957004,0</coordinates></Point></Placemark>
+<Placemark><name>couto de cambeses</name><Point><coordinates>-8.526474,41.48544,0</coordinates></Point></Placemark>
+<Placemark><name>couto de cucujaes</name><Point><coordinates>-8.49482,40.868011,0</coordinates></Point></Placemark>
+<Placemark><name>covas</name><Point><coordinates>-7.92834,40.350368,0</coordinates></Point></Placemark>
+<Placemark><name>covelinhas</name><Point><coordinates>-7.68312,41.159538,0</coordinates></Point></Placemark>
+<Placemark><name>covilha</name><Point><coordinates>-7.504385,40.280775,0</coordinates></Point></Placemark>
+<Placemark><name>crato</name><Point><coordinates>-7.68378,39.308001,0</coordinates></Point></Placemark>
+<Placemark><name>cruz quebrada</name><Point><coordinates>-9.25112,38.702431,0</coordinates></Point></Placemark>
+<Placemark><name>cuba</name><Point><coordinates>-7.89279,38.164969,0</coordinates></Point></Placemark>
+<Placemark><name>cuca</name><Point><coordinates>-8.037122,41.498552,0</coordinates></Point></Placemark>
+<Placemark><name>cunheira</name><Point><coordinates>-7.809,39.320068,0</coordinates></Point></Placemark>
+<Placemark><name>curia</name><Point><coordinates>-8.46226,40.428051,0</coordinates></Point></Placemark>
+<Placemark><name>curvaceiras</name><Point><coordinates>-8.40059,41.355728,0</coordinates></Point></Placemark>
+<Placemark><name>dagorda-peniche</name><Point><coordinates>-9.378927,39.361861,0</coordinates></Point></Placemark>
+<Placemark><name>darque</name><Point><coordinates>-8.80152,41.681271,0</coordinates></Point></Placemark>
+<Placemark><name>devesas</name><Point><coordinates>-8.36838,41.133018,0</coordinates></Point></Placemark>
+<Placemark><name>dois portos</name><Point><coordinates>-9.18263,39.038879,0</coordinates></Point></Placemark>
+<Placemark><name>donas</name><Point><coordinates>-7.47732,40.13245,0</coordinates></Point></Placemark>
+<Placemark><name>durraes</name><Point><coordinates>-8.66899,41.638519,0</coordinates></Point></Placemark>
+<Placemark><name>eirol</name><Point><coordinates>-8.53579,40.610592,0</coordinates></Point></Placemark>
+<Placemark><name>eixo</name><Point><coordinates>-8.56171,40.620831,0</coordinates></Point></Placemark>
+<Placemark><name>elvas</name><Point><coordinates>-7.163901,38.880914,0</coordinates></Point></Placemark>
+<Placemark><name>entrecampos</name><Point><coordinates>-9.15038,38.74559,0</coordinates></Point></Placemark>
+<Placemark><name>entrecampos - poente</name><Point><coordinates>-9.15038,38.74559,0</coordinates></Point></Placemark>
+<Placemark><name>entroncamento</name><Point><coordinates>-8.467934,39.464955,0</coordinates></Point></Placemark>
+<Placemark><name>ermesinde</name><Point><coordinates>-8.54781,41.217522,0</coordinates></Point></Placemark>
+<Placemark><name>ermida</name><Point><coordinates>-7.95261,39.807251,0</coordinates></Point></Placemark>
+<Placemark><name>ermidas-sado</name><Point><coordinates>-8.41539,38.007938,0</coordinates></Point></Placemark>
+<Placemark><name>escapaes</name><Point><coordinates>-8.50402,40.376289,0</coordinates></Point></Placemark>
+<Placemark><name>esgueira</name><Point><coordinates>-8.62673,40.64764,0</coordinates></Point></Placemark>
+<Placemark><name>esmeriz</name><Point><coordinates>-8.51625,41.380451,0</coordinates></Point></Placemark>
+<Placemark><name>esmoriz</name><Point><coordinates>-8.62664,40.957512,0</coordinates></Point></Placemark>
+<Placemark><name>espadanal da azambuja</name><Point><coordinates>-8.871338,39.068132,0</coordinates></Point></Placemark>
+<Placemark><name>espadaneira</name><Point><coordinates>-8.47051,40.210201,0</coordinates></Point></Placemark>
+<Placemark><name>espinho</name><Point><coordinates>-8.637519,41.00849,0</coordinates></Point></Placemark>
+<Placemark><name>espinho-vouga</name><Point><coordinates>-8.469669,40.639045,0</coordinates></Point></Placemark>
+<Placemark><name>esqueiro</name><Point><coordinates>-8.47932,41.376949,0</coordinates></Point></Placemark>
+<Placemark><name>estarreja</name><Point><coordinates>-8.572585,40.7533,0</coordinates></Point></Placemark>
+<Placemark><name>estombar-lagoa</name><Point><coordinates>-8.48563,37.14389,0</coordinates></Point></Placemark>
+<Placemark><name>estoril</name><Point><coordinates>-9.39741,38.703499,0</coordinates></Point></Placemark>
+<Placemark><name>famalicao</name><Point><coordinates>-8.51649,41.405991,0</coordinates></Point></Placemark>
+<Placemark><name>famalicao da nazare</name><Point><coordinates>-9.073679,39.605595,0</coordinates></Point></Placemark>
+<Placemark><name>fanhais</name><Point><coordinates>-8.99583,39.626942,0</coordinates></Point></Placemark>
+<Placemark><name>faria</name><Point><coordinates>-8.67195,41.479889,0</coordinates></Point></Placemark>
+<Placemark><name>faro</name><Point><coordinates>-7.9345,37.014875,0</coordinates></Point></Placemark>
+<Placemark><name>fatela-penamacor</name><Point><coordinates>-7.168021,40.169808,0</coordinates></Point></Placemark>
+<Placemark><name>fatima</name><Point><coordinates>-8.67942,39.63097,0</coordinates></Point></Placemark>
+<Placemark><name>fazenda</name><Point><coordinates>-31.165979,39.38953,0</coordinates></Point></Placemark>
+<Placemark><name>feliteira</name><Point><coordinates>-9.1785,39.022072,0</coordinates></Point></Placemark>
+<Placemark><name>ferradosa</name><Point><coordinates>-6.9535,41.272148,0</coordinates></Point></Placemark>
+<Placemark><name>ferragudo</name><Point><coordinates>-8.51899,37.12505,0</coordinates></Point></Placemark>
+<Placemark><name>ferrao</name><Point><coordinates>-7.61302,41.16238,0</coordinates></Point></Placemark>
+<Placemark><name>ferreiros</name><Point><coordinates>-8.0337,40.470612,0</coordinates></Point></Placemark>
+<Placemark><name>figueira da foz</name><Point><coordinates>-8.859209,40.148437,0</coordinates></Point></Placemark>
+<Placemark><name>figueiredo</name><Point><coordinates>-9.22507,39.058418,0</coordinates></Point></Placemark>
+<Placemark><name>folhadal</name><Point><coordinates>-7.85439,40.52000,0</coordinates></Point></Placemark>
+<Placemark><name>fontela</name><Point><coordinates>-8.82011,40.144348,0</coordinates></Point></Placemark>
+<Placemark><name>fontela-a</name><Point><coordinates>-7.973068,41.142695,0</coordinates></Point></Placemark>
+<Placemark><name>formoselha</name><Point><coordinates>-8.61414,40.173729,0</coordinates></Point></Placemark>
+<Placemark><name>fornos de algodres</name><Point><coordinates>-7.537894,40.621385,0</coordinates></Point></Placemark>
+<Placemark><name>francelos</name><Point><coordinates>-7.51349,41.334492,0</coordinates></Point></Placemark>
+<Placemark><name>fratel</name><Point><coordinates>-7.74468,39.627892,0</coordinates></Point></Placemark>
+<Placemark><name>frechas</name><Point><coordinates>-7.16001,41.414108,0</coordinates></Point></Placemark>
+<Placemark><name>freineda</name><Point><coordinates>-6.88924,40.584412,0</coordinates></Point></Placemark>
+<Placemark><name>freixo de numao-mos do douro</name><Point><coordinates>-8.26801,39.885099,0</coordinates></Point></Placemark>
+<Placemark><name>funcheira</name><Point><coordinates>-8.34066,37.725449,0</coordinates></Point></Placemark>
+<Placemark><name>fundao</name><Point><coordinates>-7.500814,40.13823,0</coordinates></Point></Placemark>
+<Placemark><name>fungalvaz</name><Point><coordinates>-8.49999,39.609482,0</coordinates></Point></Placemark>
+<Placemark><name>fuseta</name><Point><coordinates>-7.74523,37.054119,0</coordinates></Point></Placemark>
+<Placemark><name>fuseta-a</name><Point><coordinates>-7.74523,37.054119,0</coordinates></Point></Placemark>
+<Placemark><name>gaia</name><Point><coordinates>-8.61361,41.129108,0</coordinates></Point></Placemark>
+<Placemark><name>gata</name><Point><coordinates>-7.21263,40.52142,0</coordinates></Point></Placemark>
+<Placemark><name>general torres</name><Point><coordinates>-8.561294,40.41277,0</coordinates></Point></Placemark>
+<Placemark><name>giesteira</name><Point><coordinates>-8.1019,38.58604,0</coordinates></Point></Placemark>
+<Placemark><name>godim</name><Point><coordinates>-7.8033,41.16114,0</coordinates></Point></Placemark>
+<Placemark><name>gondarem</name><Point><coordinates>-8.75594,41.919739,0</coordinates></Point></Placemark>
+<Placemark><name>gouveia</name><Point><coordinates>-7.592999,40.495094,0</coordinates></Point></Placemark>
+<Placemark><name>grandola</name><Point><coordinates>-8.570479,38.176823,0</coordinates></Point></Placemark>
+<Placemark><name>granja</name><Point><coordinates>-8.64713,41.039742,0</coordinates></Point></Placemark>
+<Placemark><name>guarda</name><Point><coordinates>-7.261752,40.539893,0</coordinates></Point></Placemark>
+<Placemark><name>guia</name><Point><coordinates>-8.78463,39.946339,0</coordinates></Point></Placemark>
+<Placemark><name>guimaraes</name><Point><coordinates>-8.294244,41.44512,0</coordinates></Point></Placemark>
+<Placemark><name>irivo</name><Point><coordinates>-8.32786,41.176361,0</coordinates></Point></Placemark>
+<Placemark><name>jerumelo</name><Point><coordinates>-9.23397,38.94978,0</coordinates></Point></Placemark>
+<Placemark><name>juncal</name><Point><coordinates>-8.90058,39.60125,0</coordinates></Point></Placemark>
+<Placemark><name>lagos</name><Point><coordinates>-8.672249,37.103355,0</coordinates></Point></Placemark>
+<Placemark><name>lamarosa</name><Point><coordinates>-8.46365,39.06329,0</coordinates></Point></Placemark>
+<Placemark><name>lapa</name><Point><coordinates>-8.61364,41.157742,0</coordinates></Point></Placemark>
+<Placemark><name>lapa do lobo</name><Point><coordinates>-7.91809,40.47617,0</coordinates></Point></Placemark>
+<Placemark><name>lardosa</name><Point><coordinates>-7.44447,39.988739,0</coordinates></Point></Placemark>
+<Placemark><name>lares</name><Point><coordinates>-8.78059,40.12709,0</coordinates></Point></Placemark>
+<Placemark><name>latadas</name><Point><coordinates>-8.6196,38.8356,0</coordinates></Point></Placemark>
+<Placemark><name>lavradio</name><Point><coordinates>-9.05325,38.670921,0</coordinates></Point></Placemark>
+<Placemark><name>leandro</name><Point><coordinates>-8.55636,41.24297,0</coordinates></Point></Placemark>
+<Placemark><name>leca do balio</name><Point><coordinates>-8.61359,41.208351,0</coordinates></Point></Placemark>
+<Placemark><name>leiria</name><Point><coordinates>-8.811963,39.743649,0</coordinates></Point></Placemark>
+<Placemark><name>lisboa - entrecampos</name><Point><coordinates>-9.15038,38.74559,0</coordinates></Point></Placemark>
+<Placemark><name>lisboa - oriente</name><Point><coordinates>-9.09913,38.76785,0</coordinates></Point></Placemark>
+<Placemark><name>lisboa - rossio</name><Point><coordinates>-9.13956,38.712952,0</coordinates></Point></Placemark>
+<Placemark><name>lisboa - santa apolonia</name><Point><coordinates>-9.1221,38.713921,0</coordinates></Point></Placemark>
+<Placemark><name>litem</name><Point><coordinates>-8.59368 √,39.83802,0</coordinates></Point></Placemark>
+<Placemark><name>livracao</name><Point><coordinates>-8.15569 √,41.21677,0</coordinates></Point></Placemark>
+<Placemark><name>livramento</name><Point><coordinates>-9.28764,39.00824,0</coordinates></Point></Placemark>
+<Placemark><name>lordelo</name><Point><coordinates>-8.65233,41.146931,0</coordinates></Point></Placemark>
+<Placemark><name>loule</name><Point><coordinates>-8.023304,37.139875,0</coordinates></Point></Placemark>
+<Placemark><name>lourical</name><Point><coordinates>-8.37519,40.763721,0</coordinates></Point></Placemark>
+<Placemark><name>louro</name><Point><coordinates>-8.5397,41.436031,0</coordinates></Point></Placemark>
+<Placemark><name>lousado</name><Point><coordinates>-8.53494,41.349892,0</coordinates></Point></Placemark>
+<Placemark><name>lousal</name><Point><coordinates>-8.4278,38.03756,0</coordinates></Point></Placemark>
+<Placemark><name>luso-bucaco</name><Point><coordinates>-8.35849,40.378792,0</coordinates></Point></Placemark>
+<Placemark><name>luz</name><Point><coordinates>-7.69981,37.08913,0</coordinates></Point></Placemark>
+<Placemark><name>luzianes</name><Point><coordinates>-8.48703,37.590439,0</coordinates></Point></Placemark>
+<Placemark><name>macal do chao</name><Point><coordinates>-7.30244,40.692032,0</coordinates></Point></Placemark>
+<Placemark><name>macinhata</name><Point><coordinates>-8.45418,40.654442,0</coordinates></Point></Placemark>
+<Placemark><name>madalena</name><Point><coordinates>-28.528129,38.53451,0</coordinates></Point></Placemark>
+<Placemark><name>mafra</name><Point><coordinates>-9.327714,38.938535,0</coordinates></Point></Placemark>
+<Placemark><name>malveira</name><Point><coordinates>-9.25702,38.929852,0</coordinates></Point></Placemark>
+<Placemark><name>mangualde</name><Point><coordinates>-7.754764,40.604385,0</coordinates></Point></Placemark>
+<Placemark><name>marco de canaveses</name><Point><coordinates>-8.149717,41.183998,0</coordinates></Point></Placemark>
+<Placemark><name>marinha grande</name><Point><coordinates>-8.93296,39.749238,0</coordinates></Point></Placemark>
+<Placemark><name>marinhais</name><Point><coordinates>-8.70557,39.048431,0</coordinates></Point></Placemark>
+<Placemark><name>martinganca-maceira</name><Point><coordinates>-7.470604,40.683955,0</coordinates></Point></Placemark>
+<Placemark><name>marujal</name><Point><coordinates>-8.68015,40.137272,0</coordinates></Point></Placemark>
+<Placemark><name>marvao-beira</name><Point><coordinates>-9.158484,39.07712,0</coordinates></Point></Placemark>
+<Placemark><name>marvila</name><Point><coordinates>-9.10104,38.741039,0</coordinates></Point></Placemark>
+<Placemark><name>massama-barcarena</name><Point><coordinates>-9.278239,38.731745,0</coordinates></Point></Placemark>
+<Placemark><name>mata</name><Point><coordinates>-7.35008,39.890511,0</coordinates></Point></Placemark>
+<Placemark><name>mato de miranda</name><Point><coordinates>-8.55367,39.365871,0</coordinates></Point></Placemark>
+<Placemark><name>mazagao</name><Point><coordinates>-8.370912,41.702084,0</coordinates></Point></Placemark>
+<Placemark><name>mealhada</name><Point><coordinates>-8.449609,40.37817,0</coordinates></Point></Placemark>
+<Placemark><name>meia praia</name><Point><coordinates>-8.65823,37.11367,0</coordinates></Point></Placemark>
+<Placemark><name>meinedo</name><Point><coordinates>-8.2593,41.249771,0</coordinates></Point></Placemark>
+<Placemark><name>merces</name><Point><coordinates>-9.14878,38.716122,0</coordinates></Point></Placemark>
+<Placemark><name>messines-alte</name><Point><coordinates>-8.175994,37.23534,0</coordinates></Point></Placemark>
+<Placemark><name>mexilhoeira grande</name><Point><coordinates>-8.61429,37.156139,0</coordinates></Point></Placemark>
+<Placemark><name>midoes</name><Point><coordinates>-8.58038,41.507481,0</coordinates></Point></Placemark>
+<Placemark><name>mira sintra-melecas</name><Point><coordinates>-9.31945,38.791672,0</coordinates></Point></Placemark>
+<Placemark><name>miramar</name><Point><coordinates>-8.65079,41.067879,0</coordinates></Point></Placemark>
+<Placemark><name>mirandela</name><Point><coordinates>-7.185238,41.485765,0</coordinates></Point></Placemark>
+<Placemark><name>mirao</name><Point><coordinates>-8.27009,41.569691,0</coordinates></Point></Placemark>
+<Placemark><name>miuzela</name><Point><coordinates>-7.00611,40.510979,0</coordinates></Point></Placemark>
+<Placemark><name>mogofores</name><Point><coordinates>-8.46179,40.45166,0</coordinates></Point></Placemark>
+<Placemark><name>moimenta-alcafache</name><Point><coordinates>-7.866654,40.599396,0</coordinates></Point></Placemark>
+<Placemark><name>moita</name><Point><coordinates>-8.992104,38.655445,0</coordinates></Point></Placemark>
+<Placemark><name>moledo do minho</name><Point><coordinates>-8.84951,41.848061,0</coordinates></Point></Placemark>
+<Placemark><name>monte abraao</name><Point><coordinates>-9.26193,38.76096,0</coordinates></Point></Placemark>
+<Placemark><name>monte de lobos</name><Point><coordinates>-8.2648,40.414829,0</coordinates></Point></Placemark>
+<Placemark><name>monte de paramos</name><Point><coordinates>-8.629206,40.978579,0</coordinates></Point></Placemark>
+<Placemark><name>monte estoril</name><Point><coordinates>-9.40392,38.704521,0</coordinates></Point></Placemark>
+<Placemark><name>monte gordo</name><Point><coordinates>-7.73395,39.809078,0</coordinates></Point></Placemark>
+<Placemark><name>monte novo-palma</name><Point><coordinates>-8.639293,38.430948,0</coordinates></Point></Placemark>
+<Placemark><name>monte real</name><Point><coordinates>-8.86075,39.8508,0</coordinates></Point></Placemark>
+<Placemark><name>monte redondo</name><Point><coordinates>-8.8323,39.895378,0</coordinates></Point></Placemark>
+<Placemark><name>montemor</name><Point><coordinates>-9.19892,38.815899,0</coordinates></Point></Placemark>
+<Placemark><name>morgado</name><Point><coordinates>-9.08631,38.870972,0</coordinates></Point></Placemark>
+<Placemark><name>mortagua</name><Point><coordinates>-8.229941,40.397283,0</coordinates></Point></Placemark>
+<Placemark><name>moscavide</name><Point><coordinates>-9.10336,38.780369,0</coordinates></Point></Placemark>
+<Placemark><name>mosteiro</name><Point><coordinates>-8.57495,41.209629,0</coordinates></Point></Placemark>
+<Placemark><name>mouquim</name><Point><coordinates>-7.96864,41.342152,0</coordinates></Point></Placemark>
+<Placemark><name>mourisca vouga</name><Point><coordinates>-8.469669,40.639045,0</coordinates></Point></Placemark>
+<Placemark><name>mourisca-sado</name><Point><coordinates>-8.81334,38.532001,0</coordinates></Point></Placemark>
+<Placemark><name>mouriscas-a</name><Point><coordinates>-8.095281,39.502475,0</coordinates></Point></Placemark>
+<Placemark><name>muge</name><Point><coordinates>-8.71181,39.101212,0</coordinates></Point></Placemark>
+<Placemark><name>nelas</name><Point><coordinates>-7.854118,40.529427,0</coordinates></Point></Placemark>
+<Placemark><name>nespereira</name><Point><coordinates>-8.32333,41.407959,0</coordinates></Point></Placemark>
+<Placemark><name>nine</name><Point><coordinates>-8.54307,41.46468,0</coordinates></Point></Placemark>
+<Placemark><name>obidos</name><Point><coordinates>-9.158384,39.357845,0</coordinates></Point></Placemark>
+<Placemark><name>oeiras</name><Point><coordinates>-9.309909,38.692955,0</coordinates></Point></Placemark>
+<Placemark><name>oia</name><Point><coordinates>-8.53948,40.543018,0</coordinates></Point></Placemark>
+<Placemark><name>oleiros</name><Point><coordinates>-7.910403,39.917683,0</coordinates></Point></Placemark>
+<Placemark><name>olhao</name><Point><coordinates>-7.828747,37.038339,0</coordinates></Point></Placemark>
+<Placemark><name>oliveira</name><Point><coordinates>-8.19918,41.258991,0</coordinates></Point></Placemark>
+<Placemark><name>oliveira de azemeis</name><Point><coordinates>-8.479214,40.836445,0</coordinates></Point></Placemark>
+<Placemark><name>oliveira do bairro</name><Point><coordinates>-8.4924,40.514121,0</coordinates></Point></Placemark>
+<Placemark><name>oliveirinha-cabanas</name><Point><coordinates>-8.478543,41.912161,0</coordinates></Point></Placemark>
+<Placemark><name>oriente</name><Point><coordinates>-9.09913,38.76785,0</coordinates></Point></Placemark>
+<Placemark><name>oronhe</name><Point><coordinates>-8.47619,40.575211,0</coordinates></Point></Placemark>
+<Placemark><name>ourique</name><Point><coordinates>-8.227159,37.65137,0</coordinates></Point></Placemark>
+<Placemark><name>outeiro</name><Point><coordinates>-8.81369,40.05891,0</coordinates></Point></Placemark>
+<Placemark><name>ovar</name><Point><coordinates>-8.623824,40.859557,0</coordinates></Point></Placemark>
+<Placemark><name>paco de arcos</name><Point><coordinates>-9.2944,38.702431,0</coordinates></Point></Placemark>
+<Placemark><name>pacos de brandao</name><Point><coordinates>-8.58171,40.97393,0</coordinates></Point></Placemark>
+<Placemark><name>paialvo</name><Point><coordinates>-8.46703,39.56324,0</coordinates></Point></Placemark>
+<Placemark><name>pala</name><Point><coordinates>-7.14935,40.766521,0</coordinates></Point></Placemark>
+<Placemark><name>palmela</name><Point><coordinates>-8.899011,38.56793,0</coordinates></Point></Placemark>
+<Placemark><name>palmilheira / aguas santas</name><Point><coordinates>-8.573895,41.207106,0</coordinates></Point></Placemark>
+<Placemark><name>pampilhosa</name><Point><coordinates>-7.9508,40.046341,0</coordinates></Point></Placemark>
+<Placemark><name>papizios</name><Point><coordinates>-8.05167,40.42815,0</coordinates></Point></Placemark>
+<Placemark><name>parada</name><Point><coordinates>-8.63333,41.366669,0</coordinates></Point></Placemark>
+<Placemark><name>paraimo-sangalhos</name><Point><coordinates>-8.48252,40.481079,0</coordinates></Point></Placemark>
+<Placemark><name>paramos</name><Point><coordinates>-8.63015,40.975849,0</coordinates></Point></Placemark>
+<Placemark><name>parede</name><Point><coordinates>-9.35882,38.687241,0</coordinates></Point></Placemark>
+<Placemark><name>paredes</name><Point><coordinates>-8.336604,41.20608,0</coordinates></Point></Placemark>
+<Placemark><name>parque das cidades</name><Point><coordinates>-9.196033,39.464303,0</coordinates></Point></Placemark>
+<Placemark><name>pataias</name><Point><coordinates>-8.99361,39.670811,0</coordinates></Point></Placemark>
+<Placemark><name>paul</name><Point><coordinates>-8.21672,39.506271,0</coordinates></Point></Placemark>
+<Placemark><name>pedra furada</name><Point><coordinates>-8.63388,41.471828,0</coordinates></Point></Placemark>
+<Placemark><name>pego</name><Point><coordinates>-8.15328,39.461048,0</coordinates></Point></Placemark>
+<Placemark><name>pelariga</name><Point><coordinates>-8.6279,39.96069,0</coordinates></Point></Placemark>
+<Placemark><name>penafiel</name><Point><coordinates>-8.284797,41.206193,0</coordinates></Point></Placemark>
+<Placemark><name>penteado</name><Point><coordinates>-8.95515,38.639511,0</coordinates></Point></Placemark>
+<Placemark><name>pereira</name><Point><coordinates>-8.58357,40.186001,0</coordinates></Point></Placemark>
+<Placemark><name>pereiras</name><Point><coordinates>-8.30616,41.17474,0</coordinates></Point></Placemark>
+<Placemark><name>pereirinhas</name><Point><coordinates>-8.32551,41.379532,0</coordinates></Point></Placemark>
+<Placemark><name>pero negro</name><Point><coordinates>-9.201,38.989929,0</coordinates></Point></Placemark>
+<Placemark><name>pinhal novo</name><Point><coordinates>-8.9151,38.631512,0</coordinates></Point></Placemark>
+<Placemark><name>pinhao</name><Point><coordinates>-7.54627,41.190868,0</coordinates></Point></Placemark>
+<Placemark><name>pinheiro da bemposta</name><Point><coordinates>-8.49077,40.784481,0</coordinates></Point></Placemark>
+<Placemark><name>pocinho</name><Point><coordinates>-7.12087,41.13113,0</coordinates></Point></Placemark>
+<Placemark><name>poco barreto</name><Point><coordinates>-8.38712,37.163849,0</coordinates></Point></Placemark>
+<Placemark><name>pombal</name><Point><coordinates>-8.630815,39.913649,0</coordinates></Point></Placemark>
+<Placemark><name>ponte de sor</name><Point><coordinates>-8.009025,39.252465,0</coordinates></Point></Placemark>
+<Placemark><name>porta nova</name><Point><coordinates>-8.022814,41.414515,0</coordinates></Point></Placemark>
+<Placemark><name>portalegre</name><Point><coordinates>-7.430469,39.296455,0</coordinates></Point></Placemark>
+<Placemark><name>portela</name><Point><coordinates>-9.11111,38.78149,0</coordinates></Point></Placemark>
+<Placemark><name>portela de sintra</name><Point><coordinates>-9.241644,38.823095,0</coordinates></Point></Placemark>
+<Placemark><name>portimao</name><Point><coordinates>-8.532488,37.139939,0</coordinates></Point></Placemark>
+<Placemark><name>porto - campanha</name><Point><coordinates>-8.579,41.157001,0</coordinates></Point></Placemark>
+<Placemark><name>porto - sao bento</name><Point><coordinates>-8.631807,41.640814,0</coordinates></Point></Placemark>
+<Placemark><name>porto de rei</name><Point><coordinates>-7.90989,41.121891,0</coordinates></Point></Placemark>
+<Placemark><name>povoa</name><Point><coordinates>-8.67991,39.300812,0</coordinates></Point></Placemark>
+<Placemark><name>praca do quebedo</name><Point><coordinates>-8.53105,41.223141,0</coordinates></Point></Placemark>
+<Placemark><name>pragal</name><Point><coordinates>-9.17053,38.672932,0</coordinates></Point></Placemark>
+<Placemark><name>praia do ribatejo</name><Point><coordinates>-8.35713,39.46476,0</coordinates></Point></Placemark>
+<Placemark><name>praias sado-a</name><Point><coordinates>-8.834304,38.51577,0</coordinates></Point></Placemark>
+<Placemark><name>praias-sado</name><Point><coordinates>-8.834304,38.51577,0</coordinates></Point></Placemark>
+<Placemark><name>queluz-belas</name><Point><coordinates>-9.25925,38.757389,0</coordinates></Point></Placemark>
+<Placemark><name>quintans</name><Point><coordinates>-8.61857,40.58403,0</coordinates></Point></Placemark>
+<Placemark><name>ramalhal</name><Point><coordinates>-8.26028,41.051739,0</coordinates></Point></Placemark>
+<Placemark><name>reboleira</name><Point><coordinates>-9.23031,38.750519,0</coordinates></Point></Placemark>
+<Placemark><name>recarei-sobreira</name><Point><coordinates>-8.357938,41.639754,0</coordinates></Point></Placemark>
+<Placemark><name>recesinhos</name><Point><coordinates>-8.21166,41.222912,0</coordinates></Point></Placemark>
+<Placemark><name>rede</name><Point><coordinates>-7.86701,41.1609,0</coordinates></Point></Placemark>
+<Placemark><name>regua</name><Point><coordinates>-7.79116,41.161469,0</coordinates></Point></Placemark>
+<Placemark><name>reguengo-v.pedra-pontevel</name><Point><coordinates>-8.838519,39.15037,0</coordinates></Point></Placemark>
+<Placemark><name>retaxo</name><Point><coordinates>-7.57966,39.754459,0</coordinates></Point></Placemark>
+<Placemark><name>reveles</name><Point><coordinates>-8.51585,40.189461,0</coordinates></Point></Placemark>
+<Placemark><name>riachos-t.novas-golega</name><Point><coordinates>-8.487461,39.403041,0</coordinates></Point></Placemark>
+<Placemark><name>ribeira de seica</name><Point><coordinates>-27.976134,38.599944,0</coordinates></Point></Placemark>
+<Placemark><name>rio de mouro</name><Point><coordinates>-9.32006,38.781422,0</coordinates></Point></Placemark>
+<Placemark><name>rio meao</name><Point><coordinates>-8.57905,40.958221,0</coordinates></Point></Placemark>
+<Placemark><name>rio tinto</name><Point><coordinates>-8.55713,41.172321,0</coordinates></Point></Placemark>
+<Placemark><name>rochoso</name><Point><coordinates>-7.08888,40.515129,0</coordinates></Point></Placemark>
+<Placemark><name>rodao</name><Point><coordinates>-7.67339,39.654259,0</coordinates></Point></Placemark>
+<Placemark><name>roma - areeiro</name><Point><coordinates>-9.138509,38.743435,0</coordinates></Point></Placemark>
+<Placemark><name>rossio</name><Point><coordinates>-9.13956,38.712952,0</coordinates></Point></Placemark>
+<Placemark><name>ruilhe</name><Point><coordinates>-8.4998,41.498051,0</coordinates></Point></Placemark>
+<Placemark><name>runa</name><Point><coordinates>-9.20987,39.062859,0</coordinates></Point></Placemark>
+<Placemark><name>sabugo</name><Point><coordinates>-9.29472,38.824699,0</coordinates></Point></Placemark>
+<Placemark><name>sacavem</name><Point><coordinates>-9.10876,38.79351,0</coordinates></Point></Placemark>
+<Placemark><name>salir do porto</name><Point><coordinates>-9.15386,39.493679,0</coordinates></Point></Placemark>
+<Placemark><name>salreu</name><Point><coordinates>-8.561,40.73877,0</coordinates></Point></Placemark>
+<Placemark><name>sampaio-oleiros</name><Point><coordinates>-8.43601,41.612751,0</coordinates></Point></Placemark>
+<Placemark><name>sanfins</name><Point><coordinates>-8.58333,42.033329,0</coordinates></Point></Placemark>
+<Placemark><name>santa apolonia</name><Point><coordinates>-9.1221,38.713921,0</coordinates></Point></Placemark>
+<Placemark><name>santa cita</name><Point><coordinates>-8.3886,39.54108,0</coordinates></Point></Placemark>
+<Placemark><name>santa clara-saboia</name><Point><coordinates>-8.497492,37.493897,0</coordinates></Point></Placemark>
+<Placemark><name>santa comba dao</name><Point><coordinates>-8.12988,40.399392,0</coordinates></Point></Placemark>
+<Placemark><name>santa eulalia</name><Point><coordinates>-7.25034,39.006161,0</coordinates></Point></Placemark>
+<Placemark><name>santa eulalia-a</name><Point><coordinates>-8.213271,37.09122,0</coordinates></Point></Placemark>
+<Placemark><name>santa iria</name><Point><coordinates>-9.08392,38.847408,0</coordinates></Point></Placemark>
+<Placemark><name>santa margarida</name><Point><coordinates>-8.35821,38.111778,0</coordinates></Point></Placemark>
+<Placemark><name>santana-cartaxo</name><Point><coordinates>-8.786729,39.160747,0</coordinates></Point></Placemark>
+<Placemark><name>santarem</name><Point><coordinates>-8.685291,39.237828,0</coordinates></Point></Placemark>
+<Placemark><name>santiago de riba-ul</name><Point><coordinates>-8.48333,40.849998,0</coordinates></Point></Placemark>
+<Placemark><name>santo amaro</name><Point><coordinates>-9.18666,38.702202,0</coordinates></Point></Placemark>
+<Placemark><name>santo tirso</name><Point><coordinates>-8.477374,41.340732,0</coordinates></Point></Placemark>
+<Placemark><name>santos</name><Point><coordinates>-7.97362,39.599812,0</coordinates></Point></Placemark>
+<Placemark><name>sao frutuoso</name><Point><coordinates>-8.35318,40.182339,0</coordinates></Point></Placemark>
+<Placemark><name>sao gemil</name><Point><coordinates>-7.17216,41.782612,0</coordinates></Point></Placemark>
+<Placemark><name>sao joao da madeira</name><Point><coordinates>-8.493624,40.900635,0</coordinates></Point></Placemark>
+<Placemark><name>sao joao de ver</name><Point><coordinates>-8.55057,40.95797,0</coordinates></Point></Placemark>
+<Placemark><name>sao joao do estoril</name><Point><coordinates>-9.38829,38.704182,0</coordinates></Point></Placemark>
+<Placemark><name>sao joao loure</name><Point><coordinates>-9.098778,38.828178,0</coordinates></Point></Placemark>
+<Placemark><name>sao mamede</name><Point><coordinates>-8.61154,41.199558,0</coordinates></Point></Placemark>
+<Placemark><name>sao mamede de infesta</name><Point><coordinates>-8.61154,41.199558,0</coordinates></Point></Placemark>
+<Placemark><name>sao marcos</name><Point><coordinates>-8.5461,40.24287,0</coordinates></Point></Placemark>
+<Placemark><name>sao martinho do campo</name><Point><coordinates>-8.37038,41.361622,0</coordinates></Point></Placemark>
+<Placemark><name>sao martinho do porto</name><Point><coordinates>-9.13242,39.512218,0</coordinates></Point></Placemark>
+<Placemark><name>sao pedro da torre</name><Point><coordinates>-8.66436,41.99374,0</coordinates></Point></Placemark>
+<Placemark><name>sao pedro do estoril</name><Point><coordinates>-9.37247,38.69416,0</coordinates></Point></Placemark>
+<Placemark><name>sao romao</name><Point><coordinates>-7.31657,38.778042,0</coordinates></Point></Placemark>
+<Placemark><name>sapataria</name><Point><coordinates>-9.19649,38.96896,0</coordinates></Point></Placemark>
+<Placemark><name>sarnadas</name><Point><coordinates>-7.61667,39.73333,0</coordinates></Point></Placemark>
+<Placemark><name>seica-ourem</name><Point><coordinates>-8.52542,39.674568,0</coordinates></Point></Placemark>
+<Placemark><name>seixas</name><Point><coordinates>-7.87624,40.459042,0</coordinates></Point></Placemark>
+<Placemark><name>senhora da agonia</name><Point><coordinates>-7.74224,41.047861,0</coordinates></Point></Placemark>
+<Placemark><name>senhora das dores</name><Point><coordinates>-28.030574,39.084772,0</coordinates></Point></Placemark>
+<Placemark><name>senhora das neves</name><Point><coordinates>-7.58424,41.73980,0</coordinates></Point></Placemark>
+<Placemark><name>sernada do vouga</name><Point><coordinates>-8.45331,40.67289,0</coordinates></Point></Placemark>
+<Placemark><name>sete rios</name><Point><coordinates>-9.16664,38.74316,0</coordinates></Point></Placemark>
+<Placemark><name>setil</name><Point><coordinates>-8.77615,39.117512,0</coordinates></Point></Placemark>
+<Placemark><name>setubal</name><Point><coordinates>-8.887934,38.522925,0</coordinates></Point></Placemark>
+<Placemark><name>silva</name><Point><coordinates>-8.63167,41.568588,0</coordinates></Point></Placemark>
+<Placemark><name>silvalde</name><Point><coordinates>-8.627,40.988991,0</coordinates></Point></Placemark>
+<Placemark><name>silvalde-vouga</name><Point><coordinates>-8.469669,40.639045,0</coordinates></Point></Placemark>
+<Placemark><name>silves</name><Point><coordinates>-8.438487,37.188701,0</coordinates></Point></Placemark>
+<Placemark><name>simoes</name><Point><coordinates>-8.6313,40.010441,0</coordinates></Point></Placemark>
+<Placemark><name>sintra</name><Point><coordinates>-9.386389,38.796692,0</coordinates></Point></Placemark>
+<Placemark><name>soalheira</name><Point><coordinates>-7.47974,40.03315,0</coordinates></Point></Placemark>
+<Placemark><name>sobral</name><Point><coordinates>-9.152,39.019661,0</coordinates></Point></Placemark>
+<Placemark><name>soito</name><Point><coordinates>-6.96671,40.357811,0</coordinates></Point></Placemark>
+<Placemark><name>soudos-vila nova</name><Point><coordinates>-8.022814,41.414515,0</coordinates></Point></Placemark>
+<Placemark><name>soure</name><Point><coordinates>-8.624119,40.05966,0</coordinates></Point></Placemark>
+<Placemark><name>souselas</name><Point><coordinates>-8.42373,40.289711,0</coordinates></Point></Placemark>
+<Placemark><name>sta cruz - damaia</name><Point><coordinates>-9.215281,38.746733,0</coordinates></Point></Placemark>
+<Placemark><name>suzao</name><Point><coordinates>-8.24698,41.347599,0</coordinates></Point></Placemark>
+<Placemark><name>tadim</name><Point><coordinates>-8.48857,41.507622,0</coordinates></Point></Placemark>
+<Placemark><name>taipa-requeixo</name><Point><coordinates>-8.53158,40.599121,0</coordinates></Point></Placemark>
+<Placemark><name>tamel</name><Point><coordinates>-8.65333,41.56979,0</coordinates></Point></Placemark>
+<Placemark><name>tancos</name><Point><coordinates>-8.39917,39.459518,0</coordinates></Point></Placemark>
+<Placemark><name>taveiro</name><Point><coordinates>-8.50286,40.202259,0</coordinates></Point></Placemark>
+<Placemark><name>tavira</name><Point><coordinates>-7.65196,37.123143,0</coordinates></Point></Placemark>
+<Placemark><name>telhada</name><Point><coordinates>-7.99666,37.428188,0</coordinates></Point></Placemark>
+<Placemark><name>telhal</name><Point><coordinates>-9.30662,38.807491,0</coordinates></Point></Placemark>
+<Placemark><name>terronhas</name><Point><coordinates>-8.43504,41.166599,0</coordinates></Point></Placemark>
+<Placemark><name>tojeirinha</name><Point><coordinates>-7.68687,39.718311,0</coordinates></Point></Placemark>
+<Placemark><name>tomar</name><Point><coordinates>-8.412019,39.603155,0</coordinates></Point></Placemark>
+<Placemark><name>torre das vargens</name><Point><coordinates>-7.9058,39.308331,0</coordinates></Point></Placemark>
+<Placemark><name>torres vedras</name><Point><coordinates>-9.256894,39.091725,0</coordinates></Point></Placemark>
+<Placemark><name>tortosendo</name><Point><coordinates>-7.52446,40.24062,0</coordinates></Point></Placemark>
+<Placemark><name>tramagal</name><Point><coordinates>-8.24803,39.449959,0</coordinates></Point></Placemark>
+<Placemark><name>trancoso</name><Point><coordinates>-7.349704,40.78083,0</coordinates></Point></Placemark>
+<Placemark><name>travagem</name><Point><coordinates>-8.55189,41.22906,0</coordinates></Point></Placemark>
+<Placemark><name>travanca-macinhata</name><Point><coordinates>-8.453725,40.653536,0</coordinates></Point></Placemark>
+<Placemark><name>travasso</name><Point><coordinates>-8.50457,40.596321,0</coordinates></Point></Placemark>
+<Placemark><name>trezoi</name><Point><coordinates>-8.33716,40.39645,0</coordinates></Point></Placemark>
+<Placemark><name>trofa</name><Point><coordinates>-8.558283,41.336606,0</coordinates></Point></Placemark>
+<Placemark><name>tua</name><Point><coordinates>-7.4082,41.209358,0</coordinates></Point></Placemark>
+<Placemark><name>tunes</name><Point><coordinates>-8.26083,37.167259,0</coordinates></Point></Placemark>
+<Placemark><name>tuy</name><Point><coordinates>-8.64923,42.04716,0</coordinates></Point></Placemark>
+<Placemark><name>ul</name><Point><coordinates>-8.49397,40.82132,0</coordinates></Point></Placemark>
+<Placemark><name>urgueiras</name><Point><coordinates>-7.53046,41.211369,0</coordinates></Point></Placemark>
+<Placemark><name>vacarica</name><Point><coordinates>-8.41101,40.371731,0</coordinates></Point></Placemark>
+<Placemark><name>valadares</name><Point><coordinates>-8.63557,41.098202,0</coordinates></Point></Placemark>
+<Placemark><name>valado</name><Point><coordinates>-9.02045,39.588161,0</coordinates></Point></Placemark>
+<Placemark><name>vale de figueira</name><Point><coordinates>-7.59194,41.091511,0</coordinates></Point></Placemark>
+<Placemark><name>vale de prazeres</name><Point><coordinates>-7.43046,40.111328,0</coordinates></Point></Placemark>
+<Placemark><name>vale de santarem</name><Point><coordinates>-8.73088,39.192059,0</coordinates></Point></Placemark>
+<Placemark><name>vale do peso</name><Point><coordinates>-7.6493,39.350712,0</coordinates></Point></Placemark>
+<Placemark><name>vale do peso-a</name><Point><coordinates>-7.649307,39.350718,0</coordinates></Point></Placemark>
+<Placemark><name>valega</name><Point><coordinates>-8.58432,40.8349,0</coordinates></Point></Placemark>
+<Placemark><name>valenca</name><Point><coordinates>-8.640989,42.02702,0</coordinates></Point></Placemark>
+<Placemark><name>valencia de alcantara</name><Point><coordinates>-9.175502,38.704499,0</coordinates></Point></Placemark>
+<Placemark><name>valongo</name><Point><coordinates>-8.500651,41.193731,0</coordinates></Point></Placemark>
+<Placemark><name>valongo vouga</name><Point><coordinates>-8.469669,40.639045,0</coordinates></Point></Placemark>
+<Placemark><name>vargelas</name><Point><coordinates>-7.89753,37.028629,0</coordinates></Point></Placemark>
+<Placemark><name>venda do alcaide</name><Point><coordinates>-7.437688,40.13153,0</coordinates></Point></Placemark>
+<Placemark><name>vermoil</name><Point><coordinates>-8.65691,39.84864,0</coordinates></Point></Placemark>
+<Placemark><name>verride</name><Point><coordinates>-8.70678,40.131981,0</coordinates></Point></Placemark>
+<Placemark><name>vesuvio</name><Point><coordinates>-7.2616,41.1422,0</coordinates></Point></Placemark>
+<Placemark><name>viana do castelo</name><Point><coordinates>-8.829509,41.69527,0</coordinates></Point></Placemark>
+<Placemark><name>vila da feira</name><Point><coordinates>-8.174188,41.00133,0</coordinates></Point></Placemark>
+<Placemark><name>vila das aves</name><Point><coordinates>-8.40024,41.371399,0</coordinates></Point></Placemark>
+<Placemark><name>vila fernando</name><Point><coordinates>-7.31979,38.9151,0</coordinates></Point></Placemark>
+<Placemark><name>vila franca das naves</name><Point><coordinates>-7.25386,40.728451,0</coordinates></Point></Placemark>
+<Placemark><name>vila franca de xira</name><Point><coordinates>-8.989858,38.95395,0</coordinates></Point></Placemark>
+<Placemark><name>vila garcia</name><Point><coordinates>-8.07726,41.313301,0</coordinates></Point></Placemark>
+<Placemark><name>vila mea</name><Point><coordinates>-8.33774,41.392429,0</coordinates></Point></Placemark>
+<Placemark><name>vila nova da baronia</name><Point><coordinates>-8.03969,38.289532,0</coordinates></Point></Placemark>
+<Placemark><name>vila nova da rainha</name><Point><coordinates>-8.93211,39.037319,0</coordinates></Point></Placemark>
+<Placemark><name>vila nova de ancos</name><Point><coordinates>-8.63673,40.109058,0</coordinates></Point></Placemark>
+<Placemark><name>vila nova de cerveira</name><Point><coordinates>-8.744111,41.939825,0</coordinates></Point></Placemark>
+<Placemark><name>vila nova de gaia</name><Point><coordinates>-8.613614,41.129114,0</coordinates></Point></Placemark>
+<Placemark><name>vila pouca do campo</name><Point><coordinates>-8.52709,40.19529,0</coordinates></Point></Placemark>
+<Placemark><name>vila real de santo antonio</name><Point><coordinates>-7.413924,37.19319,0</coordinates></Point></Placemark>
+<Placemark><name>vilar formoso</name><Point><coordinates>-6.82984,40.608261,0</coordinates></Point></Placemark>
+<Placemark><name>vilela-fornos</name><Point><coordinates>-8.061709,41.23708,0</coordinates></Point></Placemark>
+<Placemark><name>virtudes</name><Point><coordinates>-8.82921,39.088821,0</coordinates></Point></Placemark>
+<Placemark><name>vizela</name><Point><coordinates>-8.308027,41.373575,0</coordinates></Point></Placemark>
+<Placemark><name>zibreira</name><Point><coordinates>-7.06937,39.844971,0</coordinates></Point></Placemark>
+</Document>
+</kml>

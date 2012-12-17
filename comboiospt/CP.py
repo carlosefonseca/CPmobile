@@ -36,6 +36,11 @@ class CP():
     	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
         # print r.cookies
         a = r.content
+
+        f = open('out1.html', 'w')
+        f.write(r.content)
+        f.close()
+
         start = a.find('<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">')
         end = a.find('<img src="static/images/pix.gif" alt="" width="7" height="10" border="0" /><br />')
         b = a[start:end]
@@ -91,9 +96,37 @@ class CP():
         soup = BeautifulSoup(r2.content)
         x = soup.find_all("table", {"class" : "fd_content"})[1]
 
+# NEW
+        completeRouteRaw = x.find_all("tr", recursive=False)[4].find_all("td", recursive=False)
+        completeRoute = {
+                "origin": list(completeRouteRaw[3].stripped_strings),
+                "destination": list(completeRouteRaw[4].stripped_strings),
+                "duration": completeRouteRaw[5],
+                "type": "".join(list(x.find_all("tr", recursive=False)[4].find_all("td")[2].stripped_strings))
+            }
+
+        listOfTrains = []
+        for a in x.find_all("tr", recursive=False)[6].find_all("tr"):
+            if len(list(a.stripped_strings)) > 2:
+                cols = a.find_all("td", recursive=False)
+                entry = []
+                for b in cols[1:]:
+                    s = list(b.stripped_strings)
+                    if len(s) == 1:
+                        entry.append(s[0])
+                    elif len(s) > 1:
+                        entry.append(s)
+                listOfTrains.append(entry)
+
+        htmlsummary = x.find_all("tr", recursive=False)[6:]
+
+        summary = {"complete": completeRoute, "sections":listOfTrains}
+
+#
         comboiosraw = x.parent.find_all("table", {"width":"606"})[4:]
 
         comboios = []
+
 
         for c in comboiosraw:
             if "Comboio n." in c.get_text():
@@ -103,9 +136,38 @@ class CP():
                 for p in ca[2:]:
                     paragens.append(p.split("\n"))
 
-                comboios.append({"tipo":ca[0], "numero":int(re.findall("(\d+)", ca[1])[0]), "paragens":paragens})
+                train = listOfTrains[len(comboios)]
 
-        return {"comboios":comboios}
+                comboio = { "tipo":ca[0],
+                            "numero":int(re.findall("(\d+)", ca[1])[0]),
+                            "paragens":paragens,
+                            "duration":train[3],
+                            "price":train[4]
+                            }
+
+                comboios.append(comboio)
+
+        requestParams = {"departure": completeRoute["origin"], "arrival": completeRoute["destination"],
+                            #"date": date, "hour": hour
+                            }
+
+        return {"request": requestParams, "results":comboios}
+
+
+    def processSummaryRow(row):
+        types = ""  # all train types
+        a = row.find_all("td")[2]
+        for s in a.stripped_strings:
+            types += s
+
+        a = row.find_all("table")
+        origin = reversed(list(a[0].stripped_strings))  # [time, station]
+        destination = reversed(list(a[1].stripped_strings))
+        
+        duration = row.find_all("td")[9].string
+
+        summary = {"origin": origin, "destination": destination, "type":types, "duration": duration}     
+        return summary
 
 
     def setCookie(self, rID, cookies):
@@ -172,6 +234,7 @@ class CP():
 
 
 # cp = CP()
+# x = cp.schedules("azambuja", "sintra", "2012-12-17")
 # x = cp.schedules("azambuja", "benfica", "2012-06-11", "9")
 # print x
 

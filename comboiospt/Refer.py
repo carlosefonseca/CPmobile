@@ -82,6 +82,7 @@ class Refer():
 		resp.content = {"error":txt}
 		return resp
 
-#r = Refer()
-# res = r.departures(9431039)
-# print res
+if __name__ == "__main__":
+	r = Refer()
+	res = r.departures(9431039)
+	print res

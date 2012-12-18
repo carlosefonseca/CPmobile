@@ -33,7 +33,7 @@ class Refer():
 			result = {}
 
 			result["hour"] = c[0].getText()
-			(result["type"], result["trainid"]) = c[1].getText().strip().split("\n")
+			(result["type"], result["train"]) = c[1].getText().strip().split("\n")
 
 			result["origin"] = re.findall("stationid=(\d+)\" title=\"([^\"]*)", str(c[2]))[0]
 			result["destination"] = re.findall("stationid=(\d+)\" title=\"([^\"]*)", str(c[3]))[0]
@@ -42,7 +42,7 @@ class Refer():
 
 			results.append(result)
 
-		return {"results":results}
+		return {"request": {"station":stationId}, "results":results}
 
 
 	def read(self, request, action):
@@ -85,4 +85,4 @@ class Refer():
 if __name__ == "__main__":
 	r = Refer()
 	res = r.departures(9431039)
-	print res
+	print json.dumps(res, indent=2)

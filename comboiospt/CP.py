@@ -28,12 +28,23 @@ class CP():
         - The requestID for subsequent details requests
         - List of results, objects with departure and arrival hours, type of train and the index for a subsequent details request
         """
+        
+       
         if date == "" and hour == "":
             date = datetime.now().date().strftime("%Y-%m-%d")
             hour = datetime.now().time().hour
         today = datetime.now().date() == date
         # print origin, destination, date,today, hour
         # print "Origin:", origin, "Dest:",destination, "Date:", date, "Hour:",hour
+        
+        requestParams = {"origin": origin, "destination": destination, "date": date, "hour": hour}
+        
+        if len(origin.strip()) < 3 or len(destination.strip()) < 3:
+            status = "400 Missing or incorrect station names"
+            response = {"request":requestParams, "results": [], "status":status}
+            return response
+             
+        
     	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
         # print r.cookies
         a = r.content
@@ -85,7 +96,6 @@ class CP():
             # store cookies with solutionid and return solutionid
             self.setCookie(requestID, r.cookies)
 
-        requestParams = {"origin": origin, "destination": destination, "date": date, "hour": hour}
         response = {"request":requestParams, "requestid": requestID, "results": arr, "status":status}
         return response
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 import cgi, random, sys
 import urlparse
@@ -36,38 +37,56 @@ class CP():
     	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
         # print r.cookies
         a = r.content
-        start = a.find('<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">')
-        end = a.find('<img src="static/images/pix.gif" alt="" width="7" height="10" border="0" /><br />')
-        b = a[start:end]
-        c = b.split('<td width="18" align="right"><a href="javascript:toggleLine(')
-        c.pop(0)
-        arr = [];
-        timeDiff = 15
-        i = 1
-        h = datetime.now().hour
-        m = re.findall('toggleLine\((\d+),(\d+)\)', r.content)
-        requestID = m[0][1]
-        for d in c:
+
+        f = open('out1.html', 'w')
+        f.write(r.content)
+        f.close()
+
+        # Grab result text and...
+        resulttext = re.search('<td[^>]+tit2white">\s+([^<]+)\s*<', a).group(1).strip().decode("iso-8859-1")
+
+        arr = []
+        requestID = ""
+        
+        # ...check for errors
+        if resulttext == u"Não foram encontrados resultados":
+            status = "204 No Content"
+        elif resulttext == u"":
+            status = "400 Bad Request"
+        else:
+            status = "200 OK"
+            start = a.find('<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">')
+            end = a.find('<img src="static/images/pix.gif" alt="" width="7" height="10" border="0" /><br />')
+            b = a[start:end]
+            c = b.split('<td width="18" align="right"><a href="javascript:toggleLine(')
+            c.pop(0)
+            timeDiff = 15
+            i = 1
+            h = datetime.now().hour
             m = re.findall('toggleLine\((\d+),(\d+)\)', r.content)
-            page = m[0][0]
+            requestID = m[0][1]
+            for d in c:
+                m = re.findall('toggleLine\((\d+),(\d+)\)', r.content)
+                page = m[0][0]
 
-            e = re.findall('>([^<]+)</td', d)
-            
-            if (today):
-                td = int(e[2][:2])*60+int(e[2][3:]) - h*60
-                # print "TIMEDIFF",td,
-                if td < -timeDiff:
-                    # print "SKIPPING"
-                    continue;
+                e = re.findall('>([^<]+)</td', d)
+                
+                if (today):
+                    td = int(e[2][:2])*60+int(e[2][3:]) - h*60
+                    # print "TIMEDIFF",td,
+                    if td < -timeDiff:
+                        # print "SKIPPING"
+                        continue;
 
-            # print "NOT SKIPPING"
-            arr.append({'i':i-1, 't':e[1], 'd':e[2], 'a':e[3], 'l':e[4]})
-            i+=1
+                # print "NOT SKIPPING"
+                arr.append({'i':i-1, 't':e[1], 'o':e[2], 'd':e[3], 'l':e[4]})
+                i+=1
 
-        # store cookies with solutionid and return solutionid
-        self.setCookie(requestID, r.cookies)
-        requestParams = {"departure": origin, "arrival": destination, "date": date, "hour": hour}
-        response = {"request":requestParams, "requestid": requestID, "results": arr}
+            # store cookies with solutionid and return solutionid
+            self.setCookie(requestID, r.cookies)
+
+        requestParams = {"origin": origin, "destination": destination, "date": date, "hour": hour}
+        response = {"request":requestParams, "requestid": requestID, "results": arr, "status":status}
         return response
 
 
@@ -82,30 +101,97 @@ class CP():
         Ordered list of trains needed to make the trip specified.
         Each train contains type, train number and a list of stops and respective arrival hours
         """
+        result = {}
         cks = self.getCookie(requestID)
-        r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'})
-        f = open('out.html', 'w')
-        f.write(r2.content)
-        f.close()
+        if cks is None:
+            status = "400 requestid required"
+        else:
+            r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'})
+            f = open('out.html', 'w')
+            f.write(r2.content)
+            f.close()
 
-        soup = BeautifulSoup(r2.content)
-        x = soup.find_all("table", {"class" : "fd_content"})[1]
+            soup = BeautifulSoup(r2.content)
+            x = soup.find_all("table", {"class" : "fd_content"})[1]
 
-        comboiosraw = x.parent.find_all("table", {"width":"606"})[4:]
+            rows = x.find_all("tr", recursive=False)
+            if len(rows) < 5:   # happens if index is bigger
+                status = "400 Bad Request"
+            else:
+                completeRouteRaw = rows[4].find_all("td", recursive=False)
+                completeRoute = {
+                        "origin": list(completeRouteRaw[3].stripped_strings),
+                        "destination": list(completeRouteRaw[4].stripped_strings),
+                        "duration": completeRouteRaw[5].string,
+                        "type": "".join(list(x.find_all("tr", recursive=False)[4].find_all("td")[2].stripped_strings))
+                    }
 
-        comboios = []
+                listOfTrains = []
+                for a in x.find_all("tr", recursive=False)[6].find_all("tr"):
+                    if len(list(a.stripped_strings)) > 2:
+                        cols = a.find_all("td", recursive=False)
+                        entry = []
+                        for b in cols[1:]:
+                            s = list(b.stripped_strings)
+                            if len(s) == 1:
+                                entry.append(s[0])
+                            elif len(s) > 1:
+                                entry.append(s)
+                        listOfTrains.append(entry)
 
-        for c in comboiosraw:
-            if "Comboio n." in c.get_text():
-                ca = re.split("\s{2,}",c.get_text().strip().replace(u"\xa0", ""))
+                htmlsummary = x.find_all("tr", recursive=False)[6:]
 
-                paragens = []
-                for p in ca[2:]:
-                    paragens.append(p.split("\n"))
+                summary = {"complete": completeRoute, "sections":listOfTrains}
 
-                comboios.append({"tipo":ca[0], "numero":int(re.findall("(\d+)", ca[1])[0]), "paragens":paragens})
+                comboiosraw = x.parent.find_all("table", {"width":"606"})[4:]
 
-        return {"comboios":comboios}
+                comboios = []
+
+
+                for c in comboiosraw:
+                    if "Comboio n." in c.get_text():
+                        ca = re.split("\s{2,}",c.get_text().strip().replace(u"\xa0", ""))
+
+                        paragens = []
+                        for p in ca[2:]:
+                            paragens.append(p.split("\n"))
+
+                        train = listOfTrains[len(comboios)]
+
+                        comboio = { "type":ca[0],
+                                    "train":int(re.findall("(\d+)", ca[1])[0]),
+                                    "stops":paragens,
+                                    "duration":train[3],
+                                    "price":train[4]
+                                    }
+
+                        comboios.append(comboio)
+
+                result = {"departure": completeRoute["origin"], 
+                          "arrival": completeRoute["destination"],
+                          "duration": completeRoute["duration"],
+                                    #"date": date, "hour": hour
+                          "sections":comboios
+                                    }
+                status = "200 OK"
+
+        return {"result":result, "status":status}
+
+
+    def processSummaryRow(row):
+        types = ""  # all train types
+        a = row.find_all("td")[2]
+        for s in a.stripped_strings:
+            types += s
+
+        a = row.find_all("table")
+        origin = reversed(list(a[0].stripped_strings))  # [time, station]
+        destination = reversed(list(a[1].stripped_strings))
+        
+        duration = row.find_all("td")[9].string
+
+        summary = {"origin": origin, "destination": destination, "type":types, "duration": duration}     
+        return summary
 
 
     def setCookie(self, rID, cookies):
@@ -170,8 +256,18 @@ class CP():
 
 
 
+if __name__ == "__main__":
+    cp = CP()
+    #x = cp.schedules("azambuja", "sintra")
+    #print json.dumps(x,indent=2)
+    #rid=x["requestid"]
+    #y=cp.details(rid,1)
+    #print json.dumps(y,indent=2)
+    x = cp.schedules("azambuja", "alhandra", "2012-12-17", "22")
+    print x
+    print json.dumps(cp.details(x["requestid"],1), indent=2)
+    # print json.dumps(cp.details(x["requestid"],100), indent=2)
 
-# cp = CP()
 # x = cp.schedules("azambuja", "benfica", "2012-06-11", "9")
 # print x
 

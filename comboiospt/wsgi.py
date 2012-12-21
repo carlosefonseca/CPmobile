@@ -1,6 +1,6 @@
 import logging
 import bottle
-from bottle import get, post, request, route, run, app
+from bottle import get, post, request, route, run, app, error, static_file
 import os
 import cgi
 from CP import CP
@@ -24,9 +24,20 @@ def cp_details():
 	logging.info('details:'+str(res))
 	return res
 
+#@route("/cp")
+def cp_fail():
+    return "<pre>cp/schedules?origin=#&destination=#[&date=YYYY-MM-DD][&hour=HH] \ncp/details?requestid=#&i=#"
+
 @route("/refer/departures")
 def refer_departures():
 	return refer.departures(stationId=request.query.stationid)
 
+@route("/stations.csv")
+def stations():
+    static_file("stations.csv",root=os.getcwd())
+
+@error(404)
+def ANY(error):
+    return "<pre>fail\n\ncp/schedules?origin=#&destination=#[&date=YYYY-MM-DD][&hour=HH] \ncp/details?requestid=#&i=#\n\nrefer/departures?stationid=#"+os.getcwd()
 
 #run(host='localhost', port=8080, debug=True, reloader=True)

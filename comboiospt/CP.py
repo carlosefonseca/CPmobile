@@ -114,7 +114,7 @@ class CP():
         result = {}
         cks = self.getCookie(requestID)
         if cks is None:
-            status = "400 requestid required"
+            status = "400 recent requestid required. Make a 'schedules' request first."
         else:
             r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'})
             f = open('out.html', 'w')

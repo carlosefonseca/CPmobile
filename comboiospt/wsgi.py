@@ -24,20 +24,18 @@ def cp_details():
 	logging.info('details:'+str(res))
 	return res
 
-#@route("/cp")
-def cp_fail():
-    return "<pre>cp/schedules?origin=#&destination=#[&date=YYYY-MM-DD][&hour=HH] \ncp/details?requestid=#&i=#"
-
 @route("/refer/departures")
 def refer_departures():
 	return refer.departures(stationId=request.query.stationid)
 
 @route("/stations.csv")
 def stations():
-    static_file("stations.csv",root=os.getcwd())
+    return static_file("stations.csv",root=".")
 
+@route("/")
 @error(404)
-def ANY(error):
-    return "<pre>fail\n\ncp/schedules?origin=#&destination=#[&date=YYYY-MM-DD][&hour=HH] \ncp/details?requestid=#&i=#\n\nrefer/departures?stationid=#"+os.getcwd()
-
-#run(host='localhost', port=8080, debug=True, reloader=True)
+def ANY(error=200):
+    return static_file("usage.txt", root=".")
+	
+if __name__ == "__main__":
+	run(host='localhost', port=8080, debug=True, reloader=True)

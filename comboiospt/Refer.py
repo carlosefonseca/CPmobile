@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import cgi, random, sys
 import urlparse
 from datetime import datetime
@@ -18,8 +19,12 @@ class Refer():
 		r = requests.get("http://www.refer.pt/MenuPrincipal/Passageiros/PartidaseChegadas.aspx?stationid="+str(stationId)+"&Type=Departures")
 
 		soup = BeautifulSoup(r.text)
-		if (len(soup.find_all("div", {"id":"dnn_ctr569_TrainArrivalsAndDepartures_pnlMessage"})) > 0):
-			return [];
+		msg = soup.find_all("div", {"id":"dnn_ctr569_TrainArrivalsAndDepartures_pnlMessage"})
+		if len(msg) > 0:
+			if u"Não encontrados resultados" in msg[0].string:
+				return {"status":"200 OK", "request": {"station":stationId}, "results":[]}
+			else:
+				return {"status":"500 Error - please inform developer - ".msg[0], "request": {"station":stationId}, "results":[]}
 		leTable = soup.find_all("div", {"class":"mod-table-values"})[0].table
 		
 		rows = leTable.find_all("tr")
@@ -84,5 +89,5 @@ class Refer():
 
 if __name__ == "__main__":
 	r = Refer()
-	res = r.departures(9431039)
+	res = r.departures(9431278)
 	print json.dumps(res, indent=2)

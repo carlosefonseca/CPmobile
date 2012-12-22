@@ -1,8 +1,0 @@
-myTrain usage:
-
-/cp/schedules?origin=<station-name>&destination=<station-name>[&date=<YYYY-MM-DD>][&hour=<HH>]
-/cp/details?requestid=<id-from-schedules>&i=<index>
-
-/refer/departures?stationid=<station-id>
-
-/stations.csv

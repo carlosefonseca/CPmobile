@@ -1,0 +1,377 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+*{margin:0;padding:0;}
+body {
+	font:13.34px helvetica,arial,freesans,clean,sans-serif;
+	color:black;
+	line-height:1.4em;
+	background-color: #F8F8F8;
+	padding: 0.7em;
+}
+p {
+	margin:1em 0;
+	line-height:1.5em;
+}
+table {
+	font-size:inherit;
+	font:100%;
+	margin:1em;
+}
+table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}
+select,option{padding:0 .25em;}
+optgroup{margin-top:.5em;}
+pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}
+pre {
+	margin:1em 0;
+	font-size:12px;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	font-size:12px;
+	background-color:#eee;
+	border:none;
+}
+code {
+	font-size:12px;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+img{border:0;max-width:100%;}
+abbr{border-bottom:none;}
+a{color:#4183c4;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a code,a:link code,a:visited code{color:#4183c4;}
+h2,h3{margin:1em 0;}
+h1,h2,h3,h4,h5,h6{border:0;}
+h1{font-size:200%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}
+h1:first-child{padding-top:.25em;border-top:none;}
+h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:1em;}
+h3{margin-top:1em;}
+hr{border:1px solid #ddd;}
+ul{margin:1em 0 1em 2em;}
+ol{margin:1em 0 1em 2em;}
+ul li,ol li{margin-top:.5em;margin-bottom:.5em;}
+ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}
+blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}
+dt{font-weight:bold;margin-left:1em;}
+dd{margin-left:2em;margin-bottom:1em;}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>myTrain — Portuguese Train Schedules API</title>
+
+</head>
+<body>
+<h1>myTrain — Portuguese Train Schedules API</h1>
+
+<p>This API extracts information from the websites <a href="http://cp.pt">CP.pt</a> (schedules for CP trains) and <a href="http://refer.pt">Refer.pt</a> (Train arrivals and departures at stations). Eventually, other train companies might be added.</p>
+
+<p>The API currently contains the following methods:</p>
+
+<ul>
+<li><a href="#cpsch">CP / Schedules</a></li>
+<li><a href="#cpdet">CP / Details</a></li>
+<li><a href="#referd">Refer / Departures</a></li>
+</ul>
+
+
+<p><a id="cpsch"></a></p>
+
+<h2>CP / Schedules</h2>
+
+<pre><code>/cp/schedules?origin=&lt;station-name&gt;&amp;destination=&lt;station-name&gt;[&amp;date=&lt;YYYY-MM-DD&gt;][&amp;hour=&lt;HH&gt;]
+</code></pre>
+
+<p>Returns a list of CP possible "trips" between the two stations at the given date and time. If no date/time are given, the current ones will be used. Please note that cp.pt returns results starting at 2 hours before and until 2 hours after the requested hour.</p>
+
+<p>You should use the station names as used by cp.pt, as they are fed directly to it.</p>
+
+<p>The response contains an identifier, <code>requested</code>, from cp.pt, that is required for the <code>details</code> requests, and a list of "trip possibilities" that satisfy the request.</p>
+
+<p>Please note this request doesn't specify if multiple trains and transfers are required, the <code>details</code> request is needed for that. This request can only tell you if multiple types of trains are required.</p>
+
+<ul>
+<li><code>i</code> is the index of the train, for <code>details</code></li>
+<li><p><code>t</code> is the types of trains, like <code>U</code> for Urban or <code>R+U</code> for Regional and Urban. The full list according to cp.pt:</p>
+
+<pre><code>U   Urbanos
+AP  Alfa Pendular
+IC  Intercidades
+R   Regional
+IR  Inter-Regional
+IN  Internacional
+TC  Transporte Complementar
+</code></pre></li>
+<li><p><code>l</code> is the duration of the trip</p></li>
+<li><code>o</code> is the time at the origin, the time of departure</li>
+<li><code>d</code> is the time at the destination, the time of arrival</li>
+</ul>
+
+
+<h3>Example:</h3>
+
+<h4>Request:</h4>
+
+<pre><code>/cp/schedules?origin=azambuja&amp;destination=benfica&amp;date=2012-12-21&amp;hour=12
+</code></pre>
+
+<h4>Response (shortened):</h4>
+
+<pre><code>{
+   "status":"200 OK",
+   "request":{
+      "origin":"azambuja",
+      "date":"2012-12-21",
+      "destination":"benfica",
+      "hour":"12"
+   },
+   "requestid":"1356195717737",
+   "results":[
+      {
+         "i":0,
+         "l":"0h54",
+         "t":"R+U",
+         "o":"10h33",
+         "d":"11h27"
+      },
+      {
+         "i":1,
+         "l":"1h09",
+         "t":"U",
+         "o":"10h48",
+         "d":"11h57"
+      },
+      {
+         "i":2,
+         "l":"0h53",
+         "t":"R+U",
+         "o":"11h34",
+         "d":"12h27"
+      }
+   ]
+}
+</code></pre>
+
+<p><a id="cpdet"></a></p>
+
+<h2>CP / Train Details</h2>
+
+<pre><code>/cp/details?requestid=&lt;id-from-schedules&gt;&amp;i=&lt;index&gt;
+</code></pre>
+
+<p>After requesting a schedule, you can request details for each of the trips by providing the <code>requested</code> and the <code>index</code>.</p>
+
+<p>This will return all the trains for this trip and, for each, the type, the price, the duration, and the times and stations of each stop.</p>
+
+<p>The trains are ordered, so the ending station of a train is the first of the next one.</p>
+
+<h3>Example:</h3>
+
+<h4>Request:</h4>
+
+<pre><code>/cp/details?requestid=1356195717737&amp;i=2
+</code></pre>
+
+<h4>Response:</h4>
+
+<pre><code>{
+   "status":"200 OK",
+   "result":{
+      "origin":[
+         "11h34",
+         "Azambuja"
+      ],
+      "destination":[
+         "12h27",
+         "Benfica"
+      ],
+      "duration":"0h53",
+      "sections":[
+         {
+            "duration":"0h28",
+            "price":"\u20ac3,85",
+            "train":4414,
+            "type":"Regional",
+            "stops":[
+               [
+                  "Azambuja",
+                  "11h34"
+               ],
+               [
+                  "Vila Franca De Xira",
+                  "11h46"
+               ],
+               [
+                  "Alverca",
+                  "11h52"
+               ],
+               [
+                  "Oriente",
+                  "12h02"
+               ]
+            ]
+         },
+         {
+            "duration":"0h16",
+            "price":"\u20ac2,05",
+            "train":18248,
+            "type":"Urbano",
+            "stops":[
+               [
+                  "Oriente",
+                  "12h11"
+               ],
+               [
+                  "Braco De Prata",
+                  "12h14"
+               ],
+               [
+                  "Roma - Areeiro",
+                  "12h18"
+               ],
+               [
+                  "Lisboa - Entrecampos",
+                  "12h20"
+               ],
+               [
+                  "Sete Rios",
+                  "12h23"
+               ],
+               [
+                  "Benfica",
+                  "12h27"
+               ]
+            ]
+         }
+      ]
+   }
+}
+</code></pre>
+
+<p><a id="referd"></a></p>
+
+<h2>Refer / Departures</h2>
+
+<pre><code>/refer/departures?stationid=&lt;refer's station code&gt;
+</code></pre>
+
+<p>This method gets the train departures from a station.</p>
+
+<p>For each train the origin and destination stations are specified, its type, the scheduled time of arrival and the train's status.</p>
+
+<p>Please use the list on <code>/stations.csv</code> to match the names to the ID's. Refer.pt only works with the IDs and I feel it's best to do the matching on the client side, where the user can select the correct station and let the server be as quick as possible.</p>
+
+<p>This are the possible status codes:</p>
+
+<ul>
+<li><code>À tabela</code> – Train on schedule</li>
+<li><code>Atrasado: # minutos</code> – Train delayed by # minutes beyond the scheduled time</li>
+<li><code>SUPRIMIDO</code> – Train canceled</li>
+</ul>
+
+
+<p>Please note that, sometimes, a train is not considered delayed but it still appears on the listing despite its scheduled time is already in the past, usually the train is a couple of minutes late. It's possible that requesting again might get you a delayed message.</p>
+
+<p>Also note that canceled trains usually stick around on the listings for some hours after their scheduled time.</p>
+
+<h3>Example:</h3>
+
+<h4>Request:</h4>
+
+<pre><code>/refer/departures?stationid=9431237
+</code></pre>
+
+<h4>Response:</h4>
+
+<pre><code>{
+   "request":{
+      "station":"9431237"
+   },
+   "results":[
+      {
+         "origin":[
+            "9433001",
+            "Azambuja"
+         ],
+         "status":"\u00c0 tabela",
+         "hour":"19h08",
+         "destination":[
+            "9467025",
+            "Alc\u00e2ntara-Terra"
+         ],
+         "train":"16550",
+         "type":"SUBURB"
+      },
+      {
+         "origin":[
+            "9467025",
+            "Alc\u00e2ntara-Terra"
+         ],
+         "status":"\u00c0 tabela",
+         "hour":"19h22",
+         "destination":[
+            "9433001",
+            "Azambuja"
+         ],
+         "train":"16452",
+         "type":"SUBURB"
+      },
+      {
+         "origin":[
+            "9433001",
+            "Azambuja"
+         ],
+         "status":"\u00c0 tabela",
+         "hour":"19h38",
+         "destination":[
+            "9467025",
+            "Alc\u00e2ntara-Terra"
+         ],
+         "train":"16552",
+         "type":"SUBURB"
+      },
+      {
+         "origin":[
+            "9467025",
+            "Alc\u00e2ntara-Terra"
+         ],
+         "status":"\u00c0 tabela",
+         "hour":"19h52",
+         "destination":[
+            "9433001",
+            "Azambuja"
+         ],
+         "train":"16454",
+         "type":"SUBURB"
+      }
+   ]
+}
+</code></pre>
+</body>
+</html>

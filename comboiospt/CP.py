@@ -10,6 +10,10 @@ import json
 
 from bs4 import BeautifulSoup
 
+write2Disk = False
+readFromDisk = False
+debugvar = None
+
 class CP():
     cookies = []
     headers = {'User-Agent':"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/536.19 (KHTML, like Gecko) Version/6.0 Safari/536.19"}
@@ -29,7 +33,13 @@ class CP():
         - List of results, objects with departure and arrival hours, type of train and the index for a subsequent details request
         """
         
-       
+        # global debugvar
+        global write2Disk
+        global readFromDisk
+
+        filename = "schedules.html"
+
+
         if date == "" and hour == "":
             date = datetime.now().date().strftime("%Y-%m-%d")
             hour = datetime.now().time().hour
@@ -44,14 +54,17 @@ class CP():
             response = {"request":requestParams, "results": [], "status":status}
             return response
              
-        
-    	r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
-        # print r.cookies
-        a = r.content
+        a = None
+        if readFromDisk:
+            a = open(filename).read()
+        else:
+            r = requests.post('http://www.cp.pt/cp/searchTimetableFromRightTool.do', headers=self.headers, params={'departStation': origin, 'arrivalStation':destination, 'goingDate':date, 'goingTime':hour, 'returningDate':'','returningTime':'','ok':'OK'})
+            a = r.content
 
-        f = open('out1.html', 'w')
-        f.write(r.content)
-        f.close()
+        if (write2Disk and not readFromDisk):
+            f = open(filename, 'w')
+            f.write(a)
+            f.close()
 
         # Grab result text and...
         resulttext = re.search('<td[^>]+tit2white">\s+([^<]+)\s*<', a).group(1).strip().decode("iso-8859-1")
@@ -69,32 +82,44 @@ class CP():
             start = a.find('<table width="606" border="0" cellspacing="0" cellpadding="0" class="fd_content">')
             end = a.find('<img src="static/images/pix.gif" alt="" width="7" height="10" border="0" /><br />')
             b = a[start:end]
-            c = b.split('<td width="18" align="right"><a href="javascript:toggleLine(')
-            c.pop(0)
-            timeDiff = 15
-            i = 1
-            h = datetime.now().hour
-            m = re.findall('toggleLine\((\d+),(\d+)\)', r.content)
-            requestID = m[0][1]
-            for d in c:
-                m = re.findall('toggleLine\((\d+),(\d+)\)', r.content)
-                page = m[0][0]
 
-                e = re.findall('>([^<]+)</td', d)
-                
-                if (today):
-                    td = int(e[2][:2])*60+int(e[2][3:]) - h*60
-                    # print "TIMEDIFF",td,
-                    if td < -timeDiff:
-                        # print "SKIPPING"
-                        continue;
+            if True == True:
+                c = b.split('<td width="18" align="right"><a href="javascript:toggleLine(')
+                c.pop(0)
+                timeDiff = 15
+                i = 1
+                h = datetime.now().hour
+                m = re.findall('toggleLine\((\d+),(\d+)\)', a)
+                requestID = m[0][1]
+                for d in c:
+                    page = m[0][0]
 
-                # print "NOT SKIPPING"
-                arr.append({'i':i-1, 't':e[1], 'o':e[2], 'd':e[3], 'l':e[4]})
-                i+=1
+                    d = d.replace('<b class="orange">|</b>', '+')
+                    e = re.findall('>([^<]+)</td', d)
+                    
+                    if (today):
+                        td = int(e[2][:2])*60+int(e[2][3:]) - h*60
+                        # print "TIMEDIFF",td,
+                        if td < -timeDiff:
+                            # print "SKIPPING"
+                            continue;
+
+                    # print "NOT SKIPPING"
+                    arr.append({'i':i-1, 't':e[1], 'o':e[2], 'd':e[3], 'l':e[4]})
+                    i+=1
+            else:
+                soup = BeautifulSoup(b)
+                requestID = re.findall(",(\d+)\)", soup.find("a", text="ver")["href"])[0]
+                trains1 = [(list(x.stripped_strings)) for x in soup.find_all("tr")[5::6]]
+                for t in trains1:
+                    d = t.index(u'detalhe')
+                    arr.append({'i':int(t[0][:-1])-1, 't':"".join(t[1:d]), 'o':t[d+1], 'd':t[d+2], 'l':t[d+3]})
 
             # store cookies with solutionid and return solutionid
-            self.setCookie(requestID, r.cookies)
+            if readFromDisk:
+                self.setCookie(requestID, 1)
+            else:
+                self.setCookie(requestID, r.cookies)
 
         response = {"request":requestParams, "requestid": requestID, "results": arr, "status":status}
         return response
@@ -111,17 +136,28 @@ class CP():
         Ordered list of trains needed to make the trip specified.
         Each train contains type, train number and a list of stops and respective arrival hours
         """
+        global write2Disk
+        global readFromDisk
+
+        filename = "details.html"
+
         result = {}
         cks = self.getCookie(requestID)
         if cks is None:
             status = "400 recent requestid required. Make a 'schedules' request first."
         else:
-            r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'})
-            f = open('out.html', 'w')
-            f.write(r2.content)
-            f.close()
+            r2 = None
+            if readFromDisk:
+                r2 = open(filename).read()
+            else:
+                r2 = requests.post('http://www.cp.pt/cp/detailSolution.do',headers = self.headers, cookies=cks, params={'page': requestID, 'selectedSolution': index, 'solutionType':'selectedSolution'}).content
+            
+            if write2Disk and not readFromDisk:
+                f = open(filename, 'w')
+                f.write(r2.content)
+                f.close()
 
-            soup = BeautifulSoup(r2.content)
+            soup = BeautifulSoup(r2)
             x = soup.find_all("table", {"class" : "fd_content"})[1]
 
             rows = x.find_all("tr", recursive=False)
@@ -177,8 +213,8 @@ class CP():
 
                         comboios.append(comboio)
 
-                result = {"departure": completeRoute["origin"], 
-                          "arrival": completeRoute["destination"],
+                result = {"origin": completeRoute["origin"], 
+                          "destination": completeRoute["destination"],
                           "duration": completeRoute["duration"],
                                     #"date": date, "hour": hour
                           "sections":comboios
@@ -273,9 +309,9 @@ if __name__ == "__main__":
     #rid=x["requestid"]
     #y=cp.details(rid,1)
     #print json.dumps(y,indent=2)
-    x = cp.schedules("azambuja", "alhandra", "2012-12-17", "22")
-    print x
-    print json.dumps(cp.details(x["requestid"],1), indent=2)
+    x = cp.schedules("azambuja", "benfica")
+    print json.dumps(x)
+    #print json.dumps(cp.details(x["requestid"],1), indent=2)
     # print json.dumps(cp.details(x["requestid"],100), indent=2)
 
 # x = cp.schedules("azambuja", "benfica", "2012-06-11", "9")

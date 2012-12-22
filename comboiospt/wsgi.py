@@ -16,17 +16,23 @@ application = bottle.default_app()
 
 @route("/cp/schedules")
 def cp_schedules():
-	return cp.schedules(origin=request.query.origin, destination=request.query.destination, date=request.query.date, hour=request.query.hour)
+	r = cp.schedules(origin=request.query.origin, destination=request.query.destination, date=request.query.date, hour=request.query.hour)
+	response.status = r["status"]
+	return r;
 
 @route("/cp/details")
 def cp_details():
-	res = cp.details(requestID=request.query.requestid, index=request.query.i)
-	logging.info('details:'+str(res))
-	return res
+	r = cp.details(requestID=request.query.requestid, index=request.query.i)
+	logging.info('details:'+str(r))
+	response.status = r["status"]
+	return r
 
 @route("/refer/departures")
 def refer_departures():
-	return refer.departures(stationId=request.query.stationid)
+	r = refer.departures(stationId=request.query.stationid)
+	response.status = r["status"]
+	return r;
+
 
 @route("/stations.csv")
 def stations():

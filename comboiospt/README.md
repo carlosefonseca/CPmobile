@@ -1,4 +1,8 @@
-#myTrain — Portuguese Train Schedules API
+#myTrain — Portuguese Train Schedules (Unofficial) API
+
+by Carlos Fonseca • [@carlosefonseca](http://twitter.com/carlosefonseca) • [Project's GitHub](https://github.com/carlosefonseca/CPmobile/tree/v2/comboiospt)
+
+----
 
 This API extracts information from the websites [CP.pt](http://cp.pt) (schedules for CP trains) and [Refer.pt](http://refer.pt) (Train arrivals and departures at stations). Eventually, other train companies might be added.
 

@@ -28,13 +28,13 @@ Please note this request doesn't specify if multiple trains and transfers are re
 - `i` is the index of the train, for `details`
 - `t` is the types of trains, like `U` for Urban or `R+U` for Regional and Urban. The full list according to cp.pt:
 
-      U	  Urbanos
-	  AP  Alfa Pendular
-	  IC  Intercidades
-	  R   Regional
-	  IR  Inter-Regional
-	  IN  Internacional
-   	  TC  Transporte Complementar
+		U   Urbanos
+		AP  Alfa Pendular
+		IC  Intercidades
+		R   Regional
+		IR  Inter-Regional
+		IN  Internacional
+		TC  Transporte Complementar
 
 - `l` is the duration of the trip
 - `o` is the time at the origin, the time of departure
